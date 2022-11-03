@@ -1,0 +1,58 @@
+
+body {
+background-color: brown;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+max-width: 900PX;
+margin: auto;
+
+}
+
+.topo_img{
+border: 3px solid green;
+border-radius: 50%;
+}
+
+#title, .subtitle, .post_title { 
+ color: blue;  
+ font-size: 40px;
+ text-transform: uppercase; 
+}
+a {
+text-decoration: line-through;
+color: blue;
+
+}
+.post_title {
+font-size: 16px;
+font-style: italic;
+margin: 0;
+margin-bottom: 15px;
+}
+.post {
+background: orange;
+padding: 20px 40px;
+margin: 40px;
+border-radius: 0;
+}
+.post_content {
+margin: 0;
+margin-bottom: 15px;
+text-decoration: capitalize;
+text-align: center;
+
+
+}
+.post_img {
+margin-bottom: 15px;
+border-radius: 50%;
+width: 100%;
+}
+.contact_list {
+list-style-type: square;
+padding: 0;
+
+}
+.contact_list li a {
+color: orange;
+text-decoration: none;
+}

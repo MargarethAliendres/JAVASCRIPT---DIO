@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html lang="PT-BR">
+    <head>
+        <title> Minha página</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="Js/main.js"></script>
+    </head>
+    <body onload= "load()" >
+        <button type="button" onclick="botao()">Clique aqui</button>
+        <p id = "agradecimento" onclick ="redirecionar()"></p>
+        <p id = "mousemove" onmouseover ="trocar()" onmouseout="voltar()">passe o mouse aqui</p>  
+    
+       <!-- ou igual abaixo para colocar varios elementos  usa o this se quiser pode tirar o ID -->
+       <p id = "mousemove" onmouseover ="trocar(this)" onmouseout="voltar(this)">passe o mouse aqui</p>  
+       <p id = "mousemove" onmouseover ="trocar(this)" onmouseout="voltar(this)">passe o mouse aqui</p>  
+       <p id = "mousemove" onmouseover ="trocar(this)" onmouseout="voltar(this)">passe o mouse aqui</p>  
+    <select onchange="funcaochange(this)";>
+        <option value = "1"> valor 1</option>
+        <option value = "2"> valor 2</option>
+        <option value = "3"> valor 3</option>
+    </select>    
+    </body>
+</html>
