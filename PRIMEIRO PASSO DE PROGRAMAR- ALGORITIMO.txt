@@ -1,0 +1,109 @@
+LÓGICA DE PROGRAMAÇÃO - É UM ALGORITIMO
+
+
+* a melhor codificação será alcançada quanto melhor for o algoritmo que representa seu problema.
+
+* o algoritmo deve ser:
+Efetivo, bem definido, finito, completo
+
+
+* resolução de problemas:
+
+1 (entender bem o problema)
+1 problema-->2 solução do problema em forma de algoritmo--> codificação em uma linguagem-->solução como programa de computador
+             2(solução em forma de algoritimo)
+
+* o algoritmo é o passo  a passo escrito em caneta no papel.
+
+* depois representa o algoritimo com uma ferramenta especifica : pseucocódigo (forma textual), fluxograma.
+
+
+* regras para construção de algoritimo:
+ -usar um verbo por frase:
+frase curta simples, imaginar q/ vc esta dessenvolvendo um algoritimo para pessoas que nao trabalham com informatica.
+ -ser objetivo: procurar usar palavras q/ não tenham sentido dúbio/duplo sentido.
+
+
+* fases para construção de um algoritimo:
+ ao montar o algoritimo precisamos primeiro dividir o problema apresentado em tres fases fundamentais
+  //entrada de dados - leia
+  // processamento - calculo para chegar ao resultado final
+  //saída - escreva resultado obtido pela fase de processamento
+
+
+Usar o sublime (igual o bloco de notas, mas melhor)
+ex:1 
+faça um algoritimo que receba dois numeros a ao final mostre o resultado da soma dos dois numeros lidos.
+
+Primeira fase para construção do algoritimo: 
+
+//entrada de dados:
+  NumroUm
+  NumeroDois
+//processamento
+  somar os dois numeros
+//saída
+  o resultado da soma
+
+===========isso acima não é o pseudocódigo isso e uma forma de representa o que vai ter no algoritimo abaixo é o algoritimo
+ 
+Algoritimo:
+
+ //Entrada de dados
+   Ler PrimeiroNumero    (o usuario vai digitar)
+   Ler SegundoNumero     (o usuario vai digitar)
+//Processamento
+  soma = PrimeiroNumero+SegundoNumero
+//Saída
+  Escrever soma
+
+
+ex2:
+faça um algoritimo para informar à Joãozinho se ele foi aprovado na matéria de Lógica para programação. 
+Joaãozinho fez 3 provas e a média necessaria para ser aprovado é de 7.
+
+Primeira fase para construção do algoritimo:
+
+//Entrada de dados
+  Nota1
+  Nota2
+  Nota3
+//Processamento
+  Calcular a média
+//saída
+  Resultado se aprovado ou reprovado
+
+======================================
+
+Algoritimo:
+
+//Entrada de dados:
+  Ler Nota1
+  Ler Nota2
+  Ler Nota3 
+//processamento
+  TotalNotas = Nota1+Nota2+Nota3
+  Media = TotalNotas/3
+//Saída  (aqui tem uma condição)
+  Se Media >= 7 entao
+     esccreva "aprovado"
+  senão
+     escreva "reprovado"
+  
+
+USAR O (VISUALG OU PORTUGOL)
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+

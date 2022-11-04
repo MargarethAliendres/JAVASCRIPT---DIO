@@ -1,0 +1,99 @@
+Algoritmo "TABELA VERDADE"
+
+
+EX: 1
+
+Var
+
+i, j : inteiro
+
+inicio
+
+ //entrada de dados       // pode ser aqui constant ou pedir para o cliente colocar o dado//
+ i <- 10
+ j <- 20
+  
+// processamento/saida
+      nao    e    nao (nao)
+      sim    e    nao (nao)
+      sim    e    sim (sim)
+se (i = 10) E  ( J = 20) entao      //esse E é o &&, os dois valores deve ser verdade para fazer algo.//
+   escreval("Fazer algo")
+senão
+   escreval ("nao fazer algo")
+
+  fimse
+
+fimalgoritmo
+
+
+EX: 2
+
+
+Var
+
+i, j : inteiro
+
+inicio
+
+ //entrada de dados       // pode ser aqui constant ou pedir para o cliente//
+ i <- 10
+ j <- 20
+
+  
+// processamento/saida
+
+    nao    ou    nao (nao)
+    sim    ou    nao (sim)
+    sim    ou    sim (sim)
+se (i > 10) OU  ( J >10) entao      //(esse OU é o OR, ||, )//  //UM DOS valores deve ser verdade para fazer algo.//
+   escreval("Fazer algo")
+senão
+   escreval ("nao fazer algo")
+
+  fimse
+
+fimalgoritmo
+
+
+EX: 3
+
+Var
+
+lado1, lado2, lado3: real
+
+inicio
+
+ //entrada de dados       /
+ escreval ("lado1")
+ leia(lado1)
+ 
+ escreval("lado2")
+ leia(lado2)
+ 
+ escreval("lado3")
+ leia(lado3)
+
+// processamento/saida
+
+se (lado1>lado2+lado3) OU  ( lado2>lado1+lado3) OU (lado3> lado2+ lado1) entao
+   escreval("não e um triangulo")
+   
+senão
+   se (lado1 = lado2) E (lado2=lado3) entao
+   escreval("equilatero")
+senao
+   se(lado1 = lado2 ) OU (lado2 =lado3)   entao
+    escreval("isoceles")
+senão
+   escreval ("escaleno")
+
+  fimse
+  fimse
+  fimse
+
+fimalgoritmo
+
+
+
+

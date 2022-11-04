@@ -1,0 +1,291 @@
+Algoritmo "tipos de variaveis "
+
+EX: 1
+
+Var
+
+nome,sobrenome,nomeCompleto:literal
+
+inicio
+
+Escreval ("nome")
+leia(nome)
+
+Escreval ("nome")
+leia(nome)
+
+nomeCompleto(nome + "" + sobrenome)
+
+escreval (nomeCompleto)   //traz o nome completo
+
+fimalgoritmo
+
+
+EX: 2
+
+Var
+
+palavra1, palavra2, palavra3: literal
+numero1, numero2, numero3: inteiro
+
+inicio
+
+//entrada de dados
+Escreval ("palavra1")
+leia(palavra1)
+
+Escreval ("palavra2")
+leia(palavra2)
+
+Escreval ("numero1)
+leia(numero1)
+
+Escreval("numero2)
+leia(numero2)
+
+//processamento
+palavra3(palavra1 + palavra2)   
+numero3(numero1+numero2)
+
+//saida
+Escreval (palavra3)   //quando usa termo literal pode colocar numeros ou palavras mas na soma ele nao soma o retorno é 10+10 ex 1010 
+Escreval (numero3)    // ja quando coloca interiro o retorno é 10+10 ex:20
+
+fimalgoritmo
+
+
+
+EX: 3
+
+Var
+numero1, numero2, subtracao, soma, multiplicacao: inteiro
+divisao:real            // NUMERO COM VIRGULA // para usar la embaixo o (/) dai vem o valor quebrado
+
+inicio
+
+//entrada de dados
+   Escreval("n1")
+   leia( numero1)
+   Escreval ("n2")
+   leia (numero2)
+                  //OBS SE NÃO QUERO MOSTRAR O RETORNO DOS CALCULOS DO PROCESSAMENTO PARA A TELA DO CLIENTE NAÕ FAÇO O PASSO DE BAIXO DA SAIDA DO ESCREVAL
+//processamento
+ soma <- numero1 + numero2
+ subtracao <- numero1 - numero2
+ multiplicacao <- numero1 * numero2
+ divisao <- numero1 / numero2                      
+
+//saida
+ Escreval(soma)
+ Escreval(subtracao)
+ Escreval(multiplicacao)
+ Escreval(divisao)
+fimalgoritmo
+
+
+EX: 3
+
+Var
+numero1, numero2, subtracao, soma, multiplicacao: inteiro
+divisao:real
+sucesso: logico    // COMPARA O VALOR DE DUAS VARIAVEIS E ATRIBUI O VALOR PARA OUTRA VARIAVEL//
+inicio
+
+//entrada de dados
+   Escreval("n1")
+   leia( numero1)
+
+                  //OBS SE NÃO QUISER MOSTRAR O RETORNO DOS CALCULOS DO PROCESSAMENTO PARA A TELA DO CLIENTE NAÕ FAÇO O PASSO DE BAIXO DA SAIDA DO ESCREVAL
+//processamento
+ sucesso  <- numero1 > 10
+
+//saida
+ Escreval(sucesso)
+
+
+
+
+Algoritmo "MOD E DIV "  - USANDO TIPO DE NUMERO INTEIRO
+
+
+EX: 1
+
+Var
+x,y:inteiro
+w: real
+
+inicio
+
+//entrada de dados
+
+  x <- 10
+  y <- 3
+
+
+//processamento
+ w <- 10/3  // para diidir usando (/) tem que declarar a variavel tipo real e o resulta vem com casas decimais Ex 3,3333
+
+//saida
+ Escreval(w)
+
+fimalgoritmo
+
+
+
+EX 2:
+
+Var
+X, Y, W : inteiro   
+ 
+Inicio
+
+x <- 10
+y <- 3
+w <- x DIV Y     (quando quero que o retorno venha redondo (usa o tipo interiro e colaca DIV)
+Escreval (w)
+
+Fimalgoritmo
+
+
+EX3:
+
+Var
+X, Y, W : inteiro
+ 
+Inicio
+
+x <- 10
+y <- 3
+w <- x % Y        (COLOCA MOD OU % TRAS O RESTO DA DIVISAO)
+Escreval (w)
+
+Fimalgoritmo
+
+EX DE USO
+
+x: inteiro
+ 
+Escreval ("Informe um numero")
+leia(x)
+
+se x % 2 = 0 entao
+  Escreval ("Numero par")
+senao
+  Escreval ("Numero impar")
+
+fimse
+
+
+
+Algoritmo "ESTRUTURAS CONDICIONAIS"
+
+
+EX: 1
+
+
+Var
+nota1, nota2, nota3, media: real
+
+inicio
+//entrada de dados
+  Escreval ("Informe a nota1")
+  leia(nota1)
+  
+  Escreval ("Informe a nota2")
+  leia (nota2)
+  
+  Escreval ("Informe a nota3")
+  leia (nota3)
+  
+// processamento
+ media <- (nota1+ nota2+ nota3)/3
+
+//saida                                   IF ESLSE
+ se media < 7  entao                   // SE, SENÃO - EXECUTE UMA COISA OU OUTRA//
+   Escreval ("Reprovado")
+ senão
+    Escreval ("Aprovado")
+  fimse
+
+fimalgoritmo
+
+
+
+EX: 2
+
+
+Var
+nota1, nota2, nota3, media: real       // SE, SENAO - SE,SENAO
+
+inicio
+
+//entrada de dados
+  Escreval ("nota1")
+  leia(nota1)
+  
+  Escreval ("nota2")
+  leia (nota2)
+  
+  Escreval ("nota3")
+  leia (nota3)
+  
+// processamento
+ media <- (nota1+ nota2+ nota3)/3
+
+//saida
+ se media >= 7  entao
+   Escreval ("VOCE ESTA APROVADO", media)    // VERIFICA SE ALGA É PARA SER EXECUTADO OU NÃO
+ senão
+    se media  < 5   entao
+    Escreval ("VOCE ESTA REPROVADO", media)
+    senão
+    Escreval ("voce esta de recuperação", media) // entende que a nota esta entre 5 e 7
+ fimse
+  fimse
+
+fimalgoritmo
+
+
+
+EX: 3
+
+
+Var
+velocidadeVeiculo, VelocidadeLeve, velocidadeMedia, velocidadeGrave, velocidadeGravissima : real
+
+inicio
+                                   //                    50*0.1 90% //
+//entrada de dados                // -10% coloca assim 50*0.9 10%  //
+ velocidadeLeve <- 50 * 1.1      //+10%  se quiser colocar 20% = 1.2 etc
+ velocidadeMedia <- 70
+ velocidadeGrave <- 90          //constantes fixas //
+ velocidadeGravissima <- 110
+
+ Escreval (" velocidadeVeiculo")
+  leia(velocidadeVeiculo)
+  
+// processamento  / saida
+ se velocidadeVeiculo <= velocidadeLeve entao
+    Escreval ("Isento")
+    senão
+    se velocidadeVeiculo <=  VelocidadeMedia   entao
+     Escreval ("3 pontos na carteira")
+    senão
+    Se velocidadeVeiculo <=  VelocidadeGrave   entao
+    Escreval ("4 pontos na carteira")
+    senão
+    se velocidadeVeiculo <=  VelocidadeGravissima
+    Escreval ("5 pontos na carteira")
+    senao
+      Escreval("7 pontos na carteira")
+ fimse
+ fimse
+ fimse
+ fimse
+
+fimalgoritmo
+
+
+
+
+
