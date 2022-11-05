@@ -25,8 +25,8 @@ inicio
  enquanto alturaMarcelo >= alturaJoao    faca
    alturaMarcelo <- alturaMarcelo + crescimentoAnualMarcelo
    alturaJoao <- alturaJoao + crescimentoAnualJoao
-   idade <- idade + 1                              // desse jeito abaixo o retorno só vem depois de concluido
- fimenquanto    // aqui é a flag de saida do loop    // coloca o fim, depois que coloca a saida,  a linguagem sai desse bloco e vai para o bloco abaixo
+   idade <- idade + 1   // aqui é a flag de saida do loop     // desse jeito abaixo o retorno só vem depois de concluido
+ fimenquanto       // coloca o fim, depois que coloca a saida,  a linguagem sai desse bloco e vai para o bloco abaixo
  //saida//
   escreval("alturaMarcelo", alturaMarcelo )
   escreval("alturaJoao", alturaJoao )
@@ -72,7 +72,7 @@ inicio
   // processamento/saida
  enquanto i<=100 faca
        Escreval (i)
-       i <- i + 1
+       i <- i + 1    //flag de encerramento
 
        se i = 50 entao
           escreval ("o i vale 50 meus amores")
@@ -115,7 +115,7 @@ inicio
        fimse
        
        se  idadeInformada <18      entao
-          qtdMenoresdeIdade <-idadeInformada + 1
+          qtdMenoresdeIdade <-idadeInformada + 1  //flag de encerramento
        fimse
 
    somaIdades <- somaIdades + idadeInformada
@@ -137,7 +137,7 @@ inicio
 =============================================================================================================
 
 
-     DO - WHILE --> FAÇA ENQUANTO
+                                 DO - WHILE --> FAÇA ENQUANTO
                                  
                              //PERFEITO PARA FAZER MENUS//
                             //O REPITA- EXECUTA O LOOP PELO MENOS UMA VEZ, PARA DEPOIS FAZER CHECAGEM.
@@ -237,5 +237,57 @@ fimalgoritmo
 
 
 =========================================================================================================
+                       
+                                             FOR --> PARA
+
+                        // NAO PRECISA COLOCAR NUMERO DE INICIALIZAÇÃO da variavel em nehuma linguagem
+                         // as outras precisam o i já vai ser inicializado dentro do proprio bloco do para//
+
+Algoritmo "FOR"
+
+Var
+
+i:inteiro
+
+Inicio
+
+i <- 0
+---------------------------------------------------------------------------
+//enquanto i <=10 faca   WHILE - DO  -  perfeito para quando, é o usuario que da a flag de saida, parada da execucao do codigo.
+   // escreval(i)           ex  de como escrever de 0 a 10
+    // i<-i +1
+//fimenquanto
+//--------------------------------------------------------------------------
+//repita                 DO - WHILE   perfeito para quando, é o usuario que da a flag de saida, parada da execucao do codigo.
+   //escreval(i)             ex  de como escrever de 0 a 10
+   //i <-i+1
+//até i>10
+//---------------------------------------------------------------------------
+  // FOR  -  perfeito para usar com vetores, pois tem valores de saida e chegada pre-definida
+ 
+ 
+  //para i de 0 ate 10 faca         ex 1 de como escrever de 0 a 10
+ //  escreval (i)                   ELE AUTOMATICAMENT SOMA i +1 EM CADA LOOP
+ //fimpara                          PODE ESCOLHER DE 1 A 50, 2 A 10  ETC
+
+
+//                =======================================================
+
+//para i de 0 ate 10 faca
+ //     escreval (i)
+ //  se i = 6 entao
+//      escreval(i)
+ //     interrompa           ele entende o 'interrompa' como uma flag de saída
+//   fimse
+//   fimpara
+//                ========================================================
+     para i de 30 ate 50 faca          // esse vai rodar 20x o bloco - pegue 50-30=2
+        se i % 2 = 0 entao               //usa % ou mode, todo numero que o resto é 2 o numero é par
+          escreval(i)
+        fimse
+     fimpara                                     //imprimir todos os calores pares
+    Fimalgoritmo
+
+
 
 
