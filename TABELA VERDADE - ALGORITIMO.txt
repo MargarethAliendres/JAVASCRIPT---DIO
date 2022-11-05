@@ -177,7 +177,7 @@ escreval("digite seu Voto")
 leia(voto)
 
 // processamento/saida
-                                         // trabalho só com igualdade//
+                                         // trabalha só com igualdade//
 //switch case//
 escolha voto                          // Seu uso é indicado quando os valores a serem analisados nessas condições são pré-definidos
 caso 20
@@ -193,27 +193,6 @@ outrocaso
  fimescolha
 
 fimalgoritmo
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
