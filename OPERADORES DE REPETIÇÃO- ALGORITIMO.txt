@@ -1,0 +1,81 @@
+Algoritmo "ENQUANTO"         // while  //      loop
+
+EX: 1
+
+
+Var
+
+alturaMarcelo, alturaJoao, crescimentoAnualMarcelo, crescimentoAnualJoao: real
+idade: inteiro
+
+inicio
+
+ //entrada de dados //
+ alturaMarcelo <- 1.20
+ alturaJoao <- 1.05
+ crescimentoAnualMarcelo <- 0.05
+ crescimentoAnualJoao <- 0.07
+ idade <- 8
+
+// processamento
+ enquanto alturaMarcelo >= alturaJoao    faca
+   alturaMarcelo <- alturaMarcelo + crescimentoAnualMarcelo
+   alturaJoao <- alturaJoao + crescimentoAnualJoao
+   idade <- idade + 1                              // desse jeito abaixo o retorno só vem depois de concluido
+ fimenquanto    // aqui é a flag de saida do loop    // coloca o fim, depois que coloca a saida,  a linguagem sai desse bloco e vai para o bloco abaixo
+ //saida//
+  escreval("alturaMarcelo", alturaMarcelo )
+  escreval("alturaJoao", alturaJoao )
+  escreval ("idade", idade)
+
+fimalgoritmo
+
+
+EX: 2
+
+Var
+
+i:inteiro
+
+inicio
+
+ //entrada de dados //
+ 
+ i <- 0
+ 
+  // processamento/saida           // coloca tudo dentro. aqui o retorno vem na hora do processamento. um a um
+ enquanto i<=100 faca
+       Escreval (i)
+       i <- i + 1                  //outra forma de flag de saida do loop//
+ fimenquanto
+
+fimalgoritmo
+
+
+
+EX: 3
+
+Var
+
+i:inteiro
+
+inicio
+
+ //entrada de dados //
+ 
+ i <- 0
+ 
+  // processamento/saida
+ enquanto i<=100 faca
+       Escreval (i)
+       i <- i + 1
+
+       se i = 50 entao
+          escreval ("o i vale 50 meus amores")
+          interrompa           // outra forma de flag de saida
+      fimse
+ fimenquanto
+
+ escreval("fim")
+
+fimalgoritmo
