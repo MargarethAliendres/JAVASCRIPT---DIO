@@ -95,5 +95,166 @@ senão
 fimalgoritmo
 
 
+EX: 4
+
+
+Var
+peso, altura, imc: real
+
+inicio
+
+ //entrada de dados       /
+ escreval("Informe seu peso")
+ leia(peso)
+ 
+ escreval("Infome sua altura")
+ leia(altura)
+
+// processamento               // operador de potencia
+ imc <- peso/altura ^ 2       // aqui pode usar loop ,vou aprender mais na frente//
+
+//saida
+
+se imc < 19 entao
+   escreval("abaixo do peso")
+senão
+   se imc < 24 entao
+   escreval ("peso ideal")
+senao
+   escreval ("acima do peso")
+
+  fimse
+  fimse
+
+fimalgoritmo
+
+
+EX: 5
+
+
+Var
+
+voto: inteiro
+
+inicio
+
+ //entrada de dados
+
+   escreval("digite seu Voto")
+   leia(voto)
+
+// processamento/saida
+se voto = 22 entao
+   Escreval ("margareth")
+senão
+   se voto = 30 entao
+   Escreval ("Derlon")
+senao
+   se voto = 10  entao
+   Escreval ("pernalonga")
+   senao
+   Escreval ("voto Nulo")
+   
+   fimse
+   fimse
+   fimse
+
+fimalgoritmo
+
+
+EX: 6
+
+Var
+
+voto: inteiro
+retorno: caractere
+
+inicio
+
+ //entrada de dados
+
+escreval("digite seu Voto")
+leia(voto)
+
+// processamento/saida
+                                         // trabalho só com igualdade//
+//switch case//
+escolha voto                          // Seu uso é indicado quando os valores a serem analisados nessas condições são pré-definidos
+caso 20
+  escreval ("Voce votou em Marcelo")
+caso 30
+ escreval ("voce votou em Derlon")
+caso 40
+ escreval ("voce votou em Pernalonga")
+outrocaso
+ escreval("voto nulo")
+ 
+
+ fimescolha
+
+fimalgoritmo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+derlon me falou para criar a variavel retorno
+
+
+Var
+
+voto: inteiro
+retorno: caractere
+
+inicio
+
+ //entrada de dados
+
+escreval("digite seu Voto")
+leia(voto)
+
+// processamento/saida
+escolha voto
+caso 20
+  retorno <-"Voce votou em Marcelo"
+caso 30
+ retorno <-"voce votou em Derlon"
+caso 40
+ retorno <-"voce votou em Pernalonga"
+outrocaso
+ retorno <-"voto nulo"
+ 
+
+ fimescolha
+ escreval(retorno)
+
+
+fimalgoritmo
+
+
+
+
+
+
+
 
 
