@@ -79,3 +79,53 @@ inicio
  escreval("fim")
 
 fimalgoritmo
+
+
+ EX: 3   -   SUPER EXEMPLO ENVOLVENDO MUITA COISA
+
+
+Var
+
+maisNovo, maisVelho, qtdEntrevistados, idadeInformada: inteiro
+porcentagemMenordeIdade, mediaIdade, qtdMenoresdeIdade, somaIdades: real
+
+inicio
+
+ //entrada de dados //
+ maisNovo <-9999
+ maisVelho <-0
+ qtdEntrevistados <- 0
+ qtdMenoresdeIdade <- 0
+
+   // processamento
+ enquanto qtdEntrevistados <=5 faca         // vai rodar 5 vezes , 5 entrevistados//
+       escreval ("informe sua idade")
+           leia (idadeInformada)
+
+       se idadeInformada >= maisvelho  entao
+           maisVelho <- idadeInformada
+       fimse
+
+       se idadeInformada <= maisNovo   entao
+           maisNovo <- idadeInformada
+       fimse
+       
+       se  idadeInformada <18      entao
+          qtdMenoresdeIdade <-idadeInformada + 1
+       fimse
+
+   somaIdades <- somaIdades + idadeInformada
+   qtdEntrevistados <- qtdEntrevistados + 1        // flag de fechamento
+   fimenquanto
+
+        //saida
+        
+      escreval("Mais novo",maisNovo)
+      escreval("Mais Velho",maisVelho)
+      porcentagemMenordeIdade <- ( qtdMenoresdeIdade/5 ) * 100
+      escreval("porcentagem Menorde de Idade", porcentagemMenordeIdade, " % ")
+      mediaIdade <- SomaIdades/5
+      escreval ("media idade", mediaIdade)
+
+  fimalgoritmo
+
