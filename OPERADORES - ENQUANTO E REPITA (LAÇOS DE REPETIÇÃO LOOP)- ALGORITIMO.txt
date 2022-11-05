@@ -1,4 +1,8 @@
-Algoritmo "ENQUANTO"         // while  //      loop
+
+===================================================================================================
+Algoritmo "ENQUANTO"   -      WHILE-DO --> ENQUANTO FAÇA
+
+                             // while  //  // ANTES DE EXECUTAR O LOOP PELA PRIMEIRTA VEZ ELE FAZ UMA CHECAGEM
 
 EX: 1
 
@@ -128,4 +132,110 @@ inicio
       escreval ("media idade", mediaIdade)
 
   fimalgoritmo
+                              
+
+=============================================================================================================
+
+
+     DO - WHILE --> FAÇA ENQUANTO
+                                 
+                             //PERFEITO PARA FAZER MENUS//
+                            //O REPITA- EXECUTA O LOOP PELO MENOS UMA VEZ, PARA DEPOIS FAZER CHECAGEM.
+Algoritmo "FAÇA" - REPITA    
+
+
+
+EX: 1
+
+Var
+
+ i : inteiro
+
+inicio
+
+ //entrada de dados //
+ i <- 0
+
+// processamento
+
+  repita
+   escreval(i)
+  i <- i + 1
+  até i >10
+  
+
+  fimalgoritmo
+
+
+EX: 2
+
+Var
+
+ senha, resposta: caractere
+ i : inteiro
+
+inicio
+
+ //entrada de dados //
+ i <- 0
+
+// processamento
+
+  escreval("Informe a Senha")
+  leia(senha)
+  limpatela       // a pessoa nao verá senha colocada//
+  repita
+  
+  escreval("digite a senha para sair do programa")
+  leia (resposta)
+  i <- i + 1
+  
+  
+//saida
+  se i = 5 entao   // quando colocar 5 repostas erradas o sistema encerra automaticamente
+  interrompa
+  fimse
+  
+  ate resposta = senha
+
+  fimalgoritmo
+
+
+EX: 2    //fazendo menus//
+
+Algoritmo "FAÇA" - MENU         //DO  - while  //     FAÇA - ENQUANTO
+
+Var
+
+opcaoMenu:caractere
+totalConta: inteiro
+
+inicio
+
+ //entrada de dados //
+
+totalconta <- 0
+
+repita
+   escreval ("1 -troca de oleo")
+   escreval ("2 - alinhamento")
+   escreval ("3 - sair")
+   leia (opcaoMenu)
+   se opcaoMenu = "1"  entao   //va digitando o servico e ele vai aumulando quando digitar 3 dá o valor total
+   totalConta <- totalConta + 100)
+   senao
+   se opcaoMenu = "2"  entao
+   totalConta <- totalConta + 50)
+   fimse
+   fimse
+
+  limpatela               // quando digita tres mostra o total da conta
+  ate opcaoMenu = "3"
+  escreval("Total Conta: R$", totalConta)
+
+fimalgoritmo
+
+
+=========================================================================================================
+
 
