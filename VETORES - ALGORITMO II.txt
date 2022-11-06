@@ -1,4 +1,4 @@
-Algoritmo "VETOR"
+Algoritmo "VETOR"   - UNIDIMENSIONAL
 
  VAR                           //JUNTA UM TIPO DE VARIAVEIS IGUAIS NUMA SÓ VARIAVEL, SUPER VARIAVEL QUE GUARDA VARIAVEIS
 
@@ -94,7 +94,7 @@ fimalgoritmo
 
 
 
-     ================================================================================================
+         ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     VETOR REVERSO -  10-9-8-7-6-5-4-3-2-1 
 
 
@@ -120,17 +120,17 @@ fimalgoritmo
 
  fimalgoritmo
 
-  ======================================================================================
+            +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                    CALCULOS COM DOIS VETORES  -  EX  VETORES - NUMERO1, NUMERO2
 
 
-VAR
+ VAR
 
  numeros1, numeros2, numero3: vetor[1..5] de inteiro    //3 vetores, ambos com a mesma posição
-  indice, aux: inteiro
+  indice: inteiro
    opcao: caractere
  inicio
- 
+
  para indice de 1 ate 5  faca
     escreval("numero1", indice)
     leia( numeros1[indice])
@@ -150,17 +150,112 @@ VAR
      se opcao = "1" entao
        para indice de 1 ate 5 faca
        numero3[indice] <- numeros1[indice] +  numeros2[indice]       //aqui soma  //
-       fimpara
        escreval(numero3[indice])
+       fimpara
+
  senao
    se opcao = "2" entao
        para indice de 1 ate 5 faca
        numero3[indice] <- numeros1[indice] - numeros2[indice]       //aqui subtrai  //
-       fimpara
        escreval(numero3[indice])
+       fimpara
+
    fimse
    fimse
 
  fimalgoritmo
+
+
+                ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+           METODO BOLHA - NAO TEM USO COMERCIAL MAIS, MAS SERVE PARA ORGANIZAR UM VETOR EM ORDEM CRESCENTE
+           É UM METODO ULTRAPASSADO  - MOSTRA A COMPLEXIDADE   - para ordenar vamos precisar do terceiro copo (aux)
+
+           QUICK SORT
+           SHELL SORT   ----> HOJE EM DIAS SAO ESSAS TECNICAS.
+           MERGE SORT
+
+
+ VAR
+
+ numero: vetor[1..10] de inteiro
+ coca, fanta, aux: inteiro
+
+ inicio
+
+ para coca de 1 ate 10  faca
+    escreval("numero1", coca)
+    leia( numero[coca])
+ fimpara
+
+ para coca  de 1 ate 10 faca
+     para fanta  de 1 ate 10 faca
+        se numero[fanta] > numero[coca] entao   //organiza em ordem crescente
+        aux <-numero[coca]
+        numero[coca] <- numero[fanta]
+        numero[fanta] <- aux
+        fimse
+     fimpara
+ fimpara
+
+ fimalgoritmo
+========================================================================================================
+                   MATRIZ- BIDIMENSIONAL    
+
+CINEMA
+
+          
+          //OBS: O ESCREVAL ESCREVE E PULA LINHA, O ESCREVA NAO PULA LINHA
+ VAR
+    //aqui e a linha e a coluna
+ cinema: vetor[1..10, 1..10] de caractere
+ indice, ind, fila, poltrona: inteiro
+ opcao: caractere
+
+ inicio
+
+ para indice de 1 ate 10  faca
+   para ind de 1 ate 10  faca
+       cinema[indice, ind] <- "0"
+   fimpara
+ fimpara
+
+repita
+   escreval("1-Reservar")
+   escreval ("2-layaout cinema")
+   escreval ("3 - sair")
+   leia (opcao)
+
+   escolha opcao
+     caso "1"
+             escreval("Fila")
+             leia(fila)
+             escreval("poltona")
+              leia(poltrona)
+
+            se cinema [fila, poltrona] = "0" entao
+            cinema [fila, poltrona] <- "X"
+            senao
+            Escreval ("Poltrona ocupada")
+            fimse
+     caso "2"
+          para indice de 1 ate 10  faca
+             para ind de 1 ate 10  faca        //  obs: o escreval escreve e pula linha, ja o escreva so escreve e nao pula linha
+                escreva (" ", cinema[indice,ind], " ")  //escreva e aspas é espaco em branco//
+             fimpara
+              escreval(" ")  // vai escrever nada, isso da uma quebra de linha
+             
+          fimpara
+          
+  fimescolha
+ate opcao = "3"
+
+ fimalgoritmo
+
+
+
+
+
+
+
 
 
