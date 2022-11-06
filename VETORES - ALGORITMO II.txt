@@ -1,0 +1,166 @@
+Algoritmo "VETOR"
+
+ VAR                           //JUNTA UM TIPO DE VARIAVEIS IGUAIS NUMA SÓ VARIAVEL, SUPER VARIAVEL QUE GUARDA VARIAVEIS
+
+ vetorNome: vetor[1..5] de caractere             
+ vetorIdade: vetor[1..5] de inteiro
+ indice: inteiro
+ 
+ inicio
+
+ para indice de 1 ate 5 faca              // OBS DEPENDE DA LINGUAGEM EX JAVA COMEÇA O VETOR DE (0) NO CASO DO VISULG DO (1)
+  escreval("informe seu nome")
+  leia(vetorNome[indice])
+ escreval(indice)
+ fimpara
+
+ fimalgoritmo
+
+
+
+ EX: 1    - PARA CADASTRAR E PESQUISAR COMO FOSSE BANCO DE DADOS
+ VAR                                   
+
+Nome: vetor[1..5] de caractere
+vetorIdade: vetor[1..5] de inteiro
+indice, sucesso: inteiro                    // usando operador inteiro com variavel sucesso
+pesquisa: caractere 
+//encontrado: logico                      pode usar com operado logico tambem como no ex 2 abaixo
+ 
+ inicio
+
+ para indice de 1 ate 5 faca
+  escreval("informe seu nome")
+  leia(Nome[indice])
+ fimpara
+limpatela
+
+    escreval("informe um nome a pesquisar")
+     leia(pesquisa)
+
+     sucesso <- 0
+     
+para indice de 1 ate 5 faca
+   se (Nome[indice]) = pesquisa entao
+       sucesso <- 1
+   fimse
+fimpara
+
+    se sucesso = 1 entao
+       escreval("cliente encontrado")
+    senao
+         escreval("cliente nao encontrado")
+    fimse
+  
+    fimalgoritmo
+
+ EX: 2    
+
+ VAR                           
+
+Nome: vetor[1..5] de caractere
+vetorIdade: vetor[1..5] de inteiro
+indice: inteiro
+//sucesso: inteiro
+pesquisa: caractere
+encontrado: logico
+ 
+ inicio
+
+ para indice de 1 ate 5 faca           // 1-2-3-4-5-
+  escreval("informe seu nome")
+  leia(Nome[indice])
+ fimpara
+limpatela
+
+    escreval("informe um nome a pesquisar")
+     leia(pesquisa)
+
+  //   sucesso <- 0
+     
+para indice de 1 ate 5 faca
+   se (Nome[indice]) = pesquisa entao
+      // sucesso <- 1
+      encontrado <- verdadeiro
+   fimse
+fimpara
+  se encontrado  entao
+       escreval("cliente encontrado")
+    senao
+         escreval("cliente nao encontrado")
+    fimse
+
+fimalgoritmo
+
+
+
+     ================================================================================================
+                    VETOR REVERSO -  10-9-8-7-6-5-4-3-2-1 
+
+
+                        //REVERSE DE VETORES
+ VAR
+
+ numeros, numerosReversos: vetor[1..10] de inteiro
+ indice, aux: inteiro            //auxiliar     ///OBS: AS VARIAVEIS TEM E AUX  (SÃO VARIAVIS PARA CALCULO - GUARDAR VALOR TEMPORARIO.
+
+ inicio
+ 
+ para indice de 1 ate 10 faca
+  escreval(" numero",indice)
+  leia(numeros[indice])
+  limpatela
+ fimpara
+
+ aux<- 11
+ 
+ para indice de 1 ate 10 faca
+  numerosReversos[aux-indice] <- numeros[indice]    // AQUI QUE FAZ O REVERSE
+   fimpara
+
+ fimalgoritmo
+
+  ======================================================================================
+                   CALCULOS COM DOIS VETORES  -  EX  VETORES - NUMERO1, NUMERO2
+
+
+VAR
+
+ numeros1, numeros2, numero3: vetor[1..5] de inteiro    //3 vetores, ambos com a mesma posição
+  indice, aux: inteiro
+   opcao: caractere
+ inicio
+ 
+ para indice de 1 ate 5  faca
+    escreval("numero1", indice)
+    leia( numeros1[indice])
+ fimpara
+
+ para indice de 1 ate 5 faca
+    escreval("numero2", indice)
+    leia(numeros2[indice])
+  fimpara
+                            //pode fazer calculos com os dois vetores de +,-, *,/, um se, um menu.
+
+ escreval("1 - soma")
+ escreval ("2 - subtracao")
+ escreval ("3 - multiplicacao")
+ leia(opcao)
+
+     se opcao = "1" entao
+       para indice de 1 ate 5 faca
+       numero3[indice] <- numeros1[indice] +  numeros2[indice]       //aqui soma  //
+       fimpara
+       escreval(numero3[indice])
+ senao
+   se opcao = "2" entao
+       para indice de 1 ate 5 faca
+       numero3[indice] <- numeros1[indice] - numeros2[indice]       //aqui subtrai  //
+       fimpara
+       escreval(numero3[indice])
+   fimse
+   fimse
+
+ fimalgoritmo
+
+

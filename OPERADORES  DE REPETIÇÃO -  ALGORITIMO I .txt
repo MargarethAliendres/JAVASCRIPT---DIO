@@ -25,8 +25,8 @@ inicio
  enquanto alturaMarcelo >= alturaJoao    faca
    alturaMarcelo <- alturaMarcelo + crescimentoAnualMarcelo
    alturaJoao <- alturaJoao + crescimentoAnualJoao
-   idade <- idade + 1   // aqui é a flag de saida do loop     // desse jeito abaixo o retorno só vem depois de concluido
- fimenquanto       // coloca o fim, depois que coloca a saida,  a linguagem sai desse bloco e vai para o bloco abaixo
+   idade <- idade + 1        // aqui é a flag de saida do loop// desse jeito abaixo o retorno só vem depois de concluido
+ fimenquanto                // coloca o fim, depois que coloca a saida,  a linguagem sai desse bloco e vai para o bloco abaixo
  //saida//
   escreval("alturaMarcelo", alturaMarcelo )
   escreval("alturaJoao", alturaJoao )
