@@ -1,0 +1,364 @@
+
+===================================================================================================
+Algoritmo "ENQUANTO"   -      WHILE-DO --> ENQUANTO FAÇA
+
+                             // while  //  // ANTES DE EXECUTAR O LOOP PELA PRIMEIRTA VEZ ELE FAZ UMA CHECAGEM
+
+EX: 1
+
+
+Var
+
+alturaMarcelo, alturaJoao, crescimentoAnualMarcelo, crescimentoAnualJoao: real
+idade: inteiro
+
+inicio
+
+ //entrada de dados //
+ alturaMarcelo <- 1.20
+ alturaJoao <- 1.05
+ crescimentoAnualMarcelo <- 0.05
+ crescimentoAnualJoao <- 0.07
+ idade <- 8
+
+// processamento
+ enquanto alturaMarcelo >= alturaJoao    faca
+   alturaMarcelo <- alturaMarcelo + crescimentoAnualMarcelo
+   alturaJoao <- alturaJoao + crescimentoAnualJoao
+   idade <- idade + 1   // aqui é a flag de saida do loop     // desse jeito abaixo o retorno só vem depois de concluido
+ fimenquanto       // coloca o fim, depois que coloca a saida,  a linguagem sai desse bloco e vai para o bloco abaixo
+ //saida//
+  escreval("alturaMarcelo", alturaMarcelo )
+  escreval("alturaJoao", alturaJoao )
+  escreval ("idade", idade)
+
+fimalgoritmo
+
+
+EX: 2
+
+Var
+
+i:inteiro
+
+inicio
+
+ //entrada de dados //
+ 
+ i <- 0
+ 
+  // processamento/saida           // coloca tudo dentro. aqui o retorno vem na hora do processamento. um a um
+ enquanto i<=100 faca
+       Escreval (i)
+       i <- i + 1                  //outra forma de flag de saida do loop//
+ fimenquanto
+
+fimalgoritmo
+
+
+
+EX: 3
+
+Var
+
+i:inteiro
+
+inicio
+
+ //entrada de dados //
+ 
+ i <- 0
+ 
+  // processamento/saida
+ enquanto i<=100 faca
+       Escreval (i)
+       i <- i + 1    //flag de encerramento
+
+       se i = 50 entao
+          escreval ("o i vale 50 meus amores")
+          interrompa           // outra forma de flag de saida
+      fimse
+ fimenquanto
+
+ escreval("fim")
+
+fimalgoritmo
+
+
+ EX: 3   -   SUPER EXEMPLO ENVOLVENDO MUITA COISA
+
+
+Var
+
+maisNovo, maisVelho, qtdEntrevistados, idadeInformada: inteiro
+porcentagemMenordeIdade, mediaIdade, qtdMenoresdeIdade, somaIdades: real
+
+inicio
+
+ //entrada de dados //
+ maisNovo <-9999
+ maisVelho <-0
+ qtdEntrevistados <- 0
+ qtdMenoresdeIdade <- 0
+
+   // processamento
+ enquanto qtdEntrevistados <=5 faca         // vai rodar 5 vezes , 5 entrevistados//
+       escreval ("informe sua idade")
+           leia (idadeInformada)
+
+       se idadeInformada >= maisvelho  entao
+           maisVelho <- idadeInformada
+       fimse
+
+       se idadeInformada <= maisNovo   entao
+           maisNovo <- idadeInformada
+       fimse
+       
+       se  idadeInformada <18      entao
+          qtdMenoresdeIdade <-idadeInformada + 1  //flag de encerramento
+       fimse
+
+   somaIdades <- somaIdades + idadeInformada
+   qtdEntrevistados <- qtdEntrevistados + 1        // flag de fechamento
+   fimenquanto
+
+        //saida
+        
+      escreval("Mais novo",maisNovo)
+      escreval("Mais Velho",maisVelho)
+      porcentagemMenordeIdade <- ( qtdMenoresdeIdade/5 ) * 100
+      escreval("porcentagem Menorde de Idade", porcentagemMenordeIdade, " % ")
+      mediaIdade <- SomaIdades/5
+      escreval ("media idade", mediaIdade)
+
+  fimalgoritmo
+                              
+
+=============================================================================================================
+
+
+                                 DO - WHILE --> FAÇA ENQUANTO
+                                 
+                             //PERFEITO PARA FAZER MENUS//
+                            //O REPITA- EXECUTA O LOOP PELO MENOS UMA VEZ, PARA DEPOIS FAZER CHECAGEM.
+Algoritmo "FAÇA" - REPITA    
+
+
+
+EX: 1
+
+Var
+
+ i : inteiro
+
+inicio
+
+ //entrada de dados //
+ i <- 0
+
+// processamento
+
+  repita
+   escreval(i)
+  i <- i + 1
+  até i >10
+  
+
+  fimalgoritmo
+
+
+EX: 2
+
+Var
+
+ senha, resposta: caractere
+ i : inteiro
+
+inicio
+
+ //entrada de dados //
+ i <- 0
+
+// processamento
+
+  escreval("Informe a Senha")
+  leia(senha)
+  limpatela       // a pessoa nao verá senha colocada//
+  repita
+  
+  escreval("digite a senha para sair do programa")
+  leia (resposta)
+  i <- i + 1
+  
+  
+//saida
+  se i = 5 entao   // quando colocar 5 repostas erradas o sistema encerra automaticamente
+  interrompa
+  fimse
+  
+  ate resposta = senha
+
+  fimalgoritmo
+
+
+EX: 2    //fazendo menus//
+
+Algoritmo "FAÇA" - MENU         //DO  - while  //     FAÇA - ENQUANTO
+
+Var
+
+opcaoMenu:caractere
+totalConta: inteiro
+
+inicio
+
+ //entrada de dados //
+
+totalconta <- 0
+
+repita
+   escreval ("1 -troca de oleo")
+   escreval ("2 - alinhamento")
+   escreval ("3 - sair")
+   leia (opcaoMenu)
+   se opcaoMenu = "1"  entao   //va digitando o servico e ele vai aumulando quando digitar 3 dá o valor total
+   totalConta <- totalConta + 100)
+   senao
+   se opcaoMenu = "2"  entao
+   totalConta <- totalConta + 50)
+   fimse
+   fimse
+
+  limpatela               // quando digita tres mostra o total da conta
+  ate opcaoMenu = "3"
+  escreval("Total Conta: R$", totalConta)
+
+fimalgoritmo
+
+
+=========================================================================================================
+                       
+                                             FOR --> PARA
+
+                        // NAO PRECISA COLOCAR NUMERO DE INICIALIZAÇÃO da variavel em nehuma linguagem
+                         // as outras precisam o i já vai ser inicializado dentro do proprio bloco do para//
+
+Algoritmo "FOR"
+
+Var
+
+i:inteiro
+
+Inicio
+
+//enquanto i <=10 faca   WHILE - DO  -  perfeito para quando, é o usuario que da a flag de saida, parada da execucao do codigo.
+   // escreval(i)           ex  de como escrever de 0 a 10
+    // i<-i +1
+//fimenquanto
+//fimalgoritmo
+//--------------------------------------------------------------------------
+//repita                 DO - WHILE   perfeito para quando, é o usuario que da a flag de saida, parada da execucao do codigo.
+   //escreval(i)             ex  de como escrever de 0 a 10
+   //i <-i+1
+//até i>10
+//fimalgoritmo
+//---------------------------------------------------------------------------
+  // FOR  -  perfeito para usar com vetores, pois tem valores de saida e chegada pre-definida
+ 
+ 
+  //para i de 0 ate 10 faca         ex 1 de como escrever de 0 a 10
+ //  escreval (i)                   ELE AUTOMATICAMENT SOMA i +1 EM CADA LOOP
+ //fimpara                          PODE ESCOLHER DE 1 A 50, 2 A 10  ETC
+ //fimalgoritmo
+
+//                =======================================================
+
+//para i de 0 ate 10 faca
+ //     escreval (i)
+ //  se i = 6 entao
+//      escreval(i)
+ //     interrompa           ele entende o 'interrompa' como uma flag de saída
+//   fimse
+//   fimpara
+//   fimalgoritmo
+//                ========================================================
+     
+      
+
+Var
+
+i:inteiro
+
+Inicio
+
+                                RETORNAR SOMENTE NUMEROS PARES
+
+  para i de 30 ate 50 faca          // esse vai rodar 20x o bloco - pegue 50-30=2
+    se i % 2 = 0 entao               //usa % ou mode, todo numero que divide por 2 e o resto é 0, o numero é par.
+          escreval(i)
+   fimse
+   fimpara                                     //imprimir todos os calores pares
+    Fimalgoritmo
+
+                  ESSE NOVO JEITO TAMBEM PARA RETORNAR NUMERO PARES
+//no exwmplo acima tem um passo 1 implicito, aqui podemos colocar o passo e mudar o numero para passar (de 2 e 2 ) retorna par, ou  3 e retorna impar etc
+   para i de 30 ate 50 passo 2 faca   
+       escreval(i)
+   fimpara
+  fimalgoritmo
+                 PARA FAZER O REVERSO COLOCA NEGATIVO -
+             //muda aqui  e   aqui
+     para i de 10 ate 0 passo -2 faca   
+       escreval(i)
+     fimpara
+  fimalgoritmo
+
+            
+                           COLOCANDO VARIAVEIS PARA USUARIO DIGITAR OS DADOS
+ VAR
+ i, w, start, end: inteiro
+
+ inicio
+                        //obs: o valor maior tem que ser o primeiro para acontecer o loop
+ escreval("comeco")
+ leia(start)
+ escreval("fim")
+ leia(end)
+ escreval("decremento")
+ escreval(w)
+
+ para i de start ate end passo w faca  
+    escreval(i)
+  fimpara
+
+  fimalgoritmo
+
+  ===============================================================================
+                   SORTEIO ALEATORIO
+
+
+VAR
+ aleatorioMaximo,aleatorioMinimo, incremento, i : inteiro
+
+ inicio
+
+ repita
+         //min max
+     aleatorio 1, 100
+         leia(aleatorioMaximo)
+          leia(aleatorioMinimo)
+     aleatorio Off
+ ate aleatorioMaximo >= aleatorioMinimo
+  limpatela
+  
+    aleatorio 1, 5
+    leia(incremento)
+    aleatorio off
+    limpatela
+
+  para i de aleatorioMinimo ate aleatorioMaximo passo incremento faca
+     escreval (i)
+  fimpara
+ 
+ fimalgoritmo
+
