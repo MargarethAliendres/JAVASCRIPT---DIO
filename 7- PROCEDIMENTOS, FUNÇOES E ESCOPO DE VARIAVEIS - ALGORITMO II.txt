@@ -121,5 +121,92 @@ fimalgoritmo
 
 ===========================================================================================================
 
+Algoritmo "FUNÇAO/PROCEDIMENTO"  // CADASTRO DE CLIENTE
 
+var
+
+opcaoMenu: caractere
+Clientes: vetor[1..5] de caractere
+
+ procedimento MostrarMenu()
+  inicio  //{
+      escreval ("1- Cadastrar")
+      escreval ("2- Pesquisar")
+      escreval ("3- Exlcuir")
+      leia(opcaoMenu)
+fimprocedimento
+
+procedimento Cadastrar()
+     var                   //variavel local  para prencher cliente automaticamente
+     i : inteiro
+
+     inicio  //{
+     para i de 1 ate 5 faca
+        se Clientes[i] = "" entao      //  " " significa vazio
+           escreval("Informe o nome do cliente")
+           leia(Clientes[i])
+        fimse
+     fimpara
+fimprocedimento
+
+procedimento Pesquisar()
+      var        //variavel local  para prencher cliente automaticamente uso com vetor
+     i: inteiro
+     nomeaPesquisar: caractere
+     indiceSucesso: inteiro
+
+      inicio  //{
+         escreval ("Informe o nome do cliente a pesquisar")
+            leia(nomeaPesquisar)
+          
+      indiceSucesso <- -1      // popular
+
+      para i de 1 ate 5 faca
+        se Clientes[i] = nomeaPesquisar  entao
+            indiceSucesso <- i
+            interrompa      //interromper o para
+        fimse
+      fimpara
+      
+        se indiceSucesso = -1 entao
+          escreval ("Cliente nao encontrado")
+        senao
+          escreval ("cliente encontrado na posição", indiceSucesso )
+        fimse
+fimprocedimento
+
+procedimento Excluir()
+    var                                 //variavel local  para prencher cliente automaticamente
+    indicedeExclusao: inteiro
+
+  inicio  //{
+
+         escreval("Informe o indice a excluir")
+           leia(indicedeExclusao)
+        se (indicedeExclusao > 5) OU (indicedeExclusao < 1) entao   // esse 5 e o maximo do vetor colocado acima no programa
+          escreval ("Indice Inválido")
+        senao
+           Clientes[indicedeExclusao] <- ""  //agora excluir, o cliente na posição rece "" vazio, dai foi excluido
+
+       fimse
+fimprocedimento
+
+
+inicio    //PUBLIC STATIC VOID MAIN                    programa principal
+        //{
+   repita
+       MostrarMenu ()
+         escolha opcaoMenu
+            caso "1"
+            Cadastrar()
+            caso "2"
+            Pesquisar()
+            caso "3"
+             Excluir()
+           outrocaso
+             escreval("opção invalida")
+         fimescolha
+    ate opcaoMenu = "4"                   //saida do repita
+
+fimalgoritmo
 
