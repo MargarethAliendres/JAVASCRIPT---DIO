@@ -210,3 +210,78 @@ inicio    //PUBLIC STATIC VOID MAIN                    programa principal
 
 fimalgoritmo
 
+===========================================================================================================
+
+                                                         
+Algoritmo "FUNÇAO/PROCEDIMENTO"  // GABARITO PROVA
+
+
+var  //
+
+ gabarito: vetor [1..10] de caractere
+ opcaoMenu: caractere
+ notaFinal: inteiro
+
+ procedimento MostrarMenu()
+      inicio
+        escreval ("1 - Cadastrar gabarito")
+        escreval ("2 - Cadastrar prova")
+        escreval ("3 - Sair")
+        leia(opcaoMenu)
+ fimprocedimento
+
+  procedimento CadastrarGabarito()
+       Var                                       //procedimento
+       i:inteiro
+
+      inicio
+        para i de 1 ate 10 faca
+          escreval("Informe a resposta do gabarito", i)
+          leia(gabarito[i])
+        fimpara
+   fimprocedimento
+
+
+   funcao CadastrarProva(): inteiro                         //funcao   //
+       Var
+       i, nota:inteiro
+       resposta: caractere
+      inicio
+      nota <- 0
+        para i de 1 ate 10 faca
+              escreval("Informe a resposta da questao", i)
+              leia(resposta)
+          se resposta = gabarito[i] entao
+              nota <- nota + 1   //flag de saida
+          fimse
+          retorne nota
+       fimpara
+ fimfuncao
+
+ funcao VerificarSituacao(nota: inteiro): literal      //funcao
+      inicio
+        se nota >= 7 entao
+          retorne "aprovado"
+        senao
+          retorne "reprovado"
+        fimse
+ fimfuncao
+
+inicio    //PUBLIC STATIC VOID MAIN
+
+repita
+
+     MostrarMenu()
+
+     escolha opcaoMenu
+         caso "1"
+          CadastrarGabarito()
+        caso "2"
+          notaFinal <- CadastrarProva()
+            escreval ( verificarSituacao(notaFinal))
+        outrocaso
+          escreval(" opção invalida")
+     fimescolha
+ate opcaoMenu = "3"
+
+fimalgoritmo
