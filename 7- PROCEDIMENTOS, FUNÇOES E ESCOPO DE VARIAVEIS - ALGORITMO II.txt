@@ -278,7 +278,7 @@ repita
           CadastrarGabarito()
         caso "2"
           notaFinal <- CadastrarProva()
-            escreval ( verificarSituacao(notaFinal))
+            escreval ( verificarSituacao(notaFinal))    // uma função chamando outra funcao
         outrocaso
           escreval(" opção invalida")
      fimescolha
