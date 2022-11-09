@@ -1,0 +1,62 @@
+
+
+  XAMP - BAIXA 
+
+ STARTA O APCACHE E O MYSQL
+  
+ APOS STARTADO - CRIAR BASE DE DADOS(TESTE) COLLECTION(LATIN1 BIN)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                  CRIAR A TABELA
+SQL -
+
+  CREATE TABLE CLIENTES
+  ( 
+   ID INT PRIMARY KEY AUTO_INCREMENT,     // PRIMARY KEY REGISTRO UNICO  E AUTO_INCREMENT ENUMERA AUTOMATICAMENTE
+   NOME VARCHAR (60) NOT NULL,             // NAO PODE SER NULO
+   CPF VARCHAR (11) NOT NULL,
+   EMAIL VARCHAR (100)
+
+   )
+
+  ABAIXO EXECUTAR
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                   POPULAR A TABELA
+    
+SQL -                         //OBS SE CLICAR EM INSERT ABAIXO JA VEM A BASE DE CODIGO DE INSERÇÃO
+ 
+   INSERT INTO CLIENTES (NOME, CPF, EMAIL) VALUES
+        ('PEDRO SILVA', '90090090090', 'PEDROSILVA@GMAIL.COM')    OBS: QUANDO FOR VACHAR DEVE PASSAR ENTRE APOSTROFOS ''. POIS SE NAO TIVER A INFORMAÇÃO FICA SENDO NUMERO.
+
+
+ABAIXO EXECUTAR
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                ATUALIZAÇÃO DE RESGISTRO
+
+SQL - 
+
+UPDATE CLIENTE SET EMAIL= 'PEDROSILVA@GMAIL.COM'   -  OBS: DESSE JEITO SUPER ERRADO, TODOS OS CLIENTES FICARIAM COM O MESMO EMAIL.
+TODO UPDATE DEVE TER O COMANDO WHERE É UM COMANDO QUE GARANTE QUE QUER MODIFICAR SÓ O REGISTRO ESPECIFICO                         
+  
+   
+   UPDATE CLIENTE SET EMAIL= 'PEDROSILVA@GMAIL.COM' WHERE ID = 2                 // JEITO CERTO
+
+ABAIXO EXECUTAR
+
+              OBS: PODE TROCAR TUDO, NOME, CPF, EMAIL, SEPARAR COM VIRGULA, SO NAO TROCA O ID.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              EXCLUSAO
+
+
+SQL -
+         DELETE FROM CLIENTES    //ASSIM ERRADO, APAGA A TABELA COM TUDO
+
+
+DELETE FROM CLIENTES WHERE ID = 2  (OU CPF PU EMAIL E OUTROS)       // NAO APAGA A TABELA, APAGA O REGISTRO
+
+EXECUTAR ABAIXO
+
+
+   
