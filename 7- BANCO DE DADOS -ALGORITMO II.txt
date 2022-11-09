@@ -1,6 +1,6 @@
 
 
-  XAMP - BAIXA 
+  XAMP CONTROL PANEL - BAIXA e instala o PHPmyAdmin 
 
  STARTA O APCACHE E O MYSQL
   
@@ -9,25 +9,50 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                                   CRIAR A TABELA
 SQL -
-
-  CREATE TABLE CLIENTES
+                                              OBS: VARCHAR, VARIA A QUANTIDADE DE CARACTERE DE NOMES 
+  CREATE TABLE CLIENTES                       OBS: CHAR, QUANTIDADE DE CARACTERE ESPECIFICO ESTATICO.
   ( 
    ID INT PRIMARY KEY AUTO_INCREMENT,     // PRIMARY KEY REGISTRO UNICO  E AUTO_INCREMENT ENUMERA AUTOMATICAMENTE
    NOME VARCHAR (60) NOT NULL,             // NAO PODE SER NULO
-   CPF VARCHAR (11) NOT NULL,
+   CPF CHAR (11) NOT NULL,
+   DATANASCIMENTO DATE NOT NULL,            
    EMAIL VARCHAR (100)
+   ATIVO BIT NOT NULL                  // O BIT É UM OPERADOR LOGICO, SIM OU NAO
 
    )
 
   ABAIXO EXECUTAR
+
+SQL - CREATE TABLE CATEGORIA
+    ( ID INT PRIMARY KEY AUTO_INCREMENT,
+      NOME VARCHAR(50) NOT NULL,
+    
+    )
+
+SQL - CREATE TABLE PRODUTOS
+    ( ID INT PRIMARY KEY AUTO_INCREMENT,
+      DESRIÇÃO VARCHAR (100) NOT NULL,
+      QTDESTOQUE FLOAT NOT NULL,             // PODE TER VALOR QUEBRADO, OU SEJA COM ,  PODE SER O REAL TAMBEM MAIS PODEROSO
+      PREÇO FLOAT NOT NULL,
+      CATEGORIAID INT NOT NULL,        //CRIA ESSA COLUNA CHAMADA CATEGORIAID QUE É O NOME PARA A FOREIGN KEY
+      FOREIGN KEY (CATEGORIAID) REFERENCES CATEGORIA (ID)      // RELACIONA AS TABELAS                                             // CRIA O NOME DA CHAVE (     )E REFERENCIA A TABELA DE CATEGORIAS
+    )
+
+
+
+
+
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                                    POPULAR A TABELA
     
 SQL -                         //OBS SE CLICAR EM INSERT ABAIXO JA VEM A BASE DE CODIGO DE INSERÇÃO
  
-   INSERT INTO CLIENTES (NOME, CPF, EMAIL) VALUES
-        ('PEDRO SILVA', '90090090090', 'PEDROSILVA@GMAIL.COM')    OBS: QUANDO FOR VACHAR DEVE PASSAR ENTRE APOSTROFOS ''. POIS SE NAO TIVER A INFORMAÇÃO FICA SENDO NUMERO.
+   INSERT INTO CLIENTES (NOME, CPF,  DATANASCIMENTO, EMAIL, ATIVO) VALUES
+        ('PEDRO SILVA', '90090090090', '23-02-1983', 'PEDROSILVA@GMAIL.COM', true)    OBS: QUANDO FOR VACHAR DEVE PASSAR ENTRE APOSTROFOS ''. POIS SE NAO TIVER A INFORMAÇÃO FICA SENDO NUMERO.
 
+                                             //true - 1           pode colocar 1 ou 0
+                                             //false -0               
 
 ABAIXO EXECUTAR
 
@@ -47,7 +72,7 @@ ABAIXO EXECUTAR
               OBS: PODE TROCAR TUDO, NOME, CPF, EMAIL, SEPARAR COM VIRGULA, SO NAO TROCA O ID.
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                              EXCLUSAO
+                              EXCLUSAO DE REGISTRO DA TABELA
 
 
 SQL -
@@ -59,4 +84,17 @@ DELETE FROM CLIENTES WHERE ID = 2  (OU CPF PU EMAIL E OUTROS)       // NAO APAGA
 EXECUTAR ABAIXO
 
 
-   
+====================================================================================================
+                           EXCLUSAO DA TABELA
+
+SQL-
+
+ DROP TABLE CLIENTES
+
+ ABAIXO EXECUTAR
+
+=====================================================================================
+
+
+ 
+
