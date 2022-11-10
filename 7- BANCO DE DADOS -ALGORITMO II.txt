@@ -35,8 +35,53 @@ SQL - CREATE TABLE PRODUTOS
       QTDESTOQUE FLOAT NOT NULL,             // PODE TER VALOR QUEBRADO, OU SEJA COM ,  PODE SER O REAL TAMBEM MAIS PODEROSO
       PREÇO FLOAT NOT NULL,
       CATEGORIAID INT NOT NULL,        //CRIA ESSA COLUNA CHAMADA CATEGORIAID QUE É O NOME PARA A FOREIGN KEY
-      FOREIGN KEY (CATEGORIAID) REFERENCES CATEGORIA (ID)      // RELACIONA AS TABELAS                                             // CRIA O NOME DA CHAVE (     )E REFERENCIA A TABELA DE CATEGORIAS
-    )
+      FOREIGN KEY (CATEGORIAID) REFERENCES CATEGORIA (ID)      // RELACIONAMENTO 1 PARA 1.
+
+    O PRODUTO NAO PODE TER MAIS DE UMA CATEGORIA, 1 -1 
+    E A CATEGORIA PODE TER MAIS DE UM PRODUTO
+
+
+   --------------------------------------------------------------------------------------------------
+               TABELA ASSOCIATIVA/INTERMEDIARIA
+
+PRODUTO         // já criada
+1-QUEIJO
+2-PRESUNTO
+
+VENDA           // vamos criar
+1- 100- HOJE - 1    (IDVENDA, VALORVENDA, DATA, IDCLIENTE)
+
+2 - 50 -HOJE - 1
+
+ITENSVENDAS      // vamos criar
+1   1    2          (ID VENDA, IDPRODUTO, QTDPRODUTO) 
+1   2    2  
+2   2    10
+
+
+
+SQL - CREATE TABLE VENDAS
+    ( ID INT PRIMARY KEY AUTO_INCREMENT,
+      DATAVENDA DATE NOT NULL,
+      TOTALVENDA FLOAT NO,
+      CLIENTEID INT NOT NULL ,                                //CRIA ESSA COLUNA CHAMADA CATEGORIAID QUE É O NOME PARA A FOREIGN KEY
+      FOREIGN KEY (CLIENTESID) REFERENCES CLIENTES (ID)    // RELACIONAMENTO 1 PARA 1.
+   )
+
+SQL -  CREATE TABLE ITENS_VENDAS           // A CHAVE PRIMARY KEY É COMPOSTA, VEJA ABAIXO
+    (  
+       IDPRODUTO INT NOT NULL,    
+       IDVENDA INT NOT NULL,
+       VALORPRODUTO FLOAT NOT NULL
+       DESCONTO FLOAT NOT NULL,
+      FOREIGN KEY (IDPRODUTO) REFERENCES PRODUTO (ID)                             
+      FOREIGN KEY (IDVENDA) REFERENCES VENDA (ID)    
+     
+       PRIMARY KEY (IDPRODUTO, IDVENDA)     // CHAVE PRIMARIA COMPOSTA, PODEM REPETIR, MAS NAO AO MESMO TEMPO. 
+)                                           // O IDPRODUTO E ID VENDA PODEM SER FOREIGN KEY E PRIMARY AO MESMO TEMPO
+     
+                                            // RELACIONAMENTO N PARA N.
+                                                  
 
 
 
@@ -95,6 +140,33 @@ SQL-
 
 =====================================================================================
 
+                                      CONSULTA
+      SIMPLES
 
- 
+SELECT  ID, PREÇO, DESRIÇÃO FROM PRODUTOS;    // VEM SOMENTE A TABELA ESPECIFICADA
+
+   OU
+
+SELECT*FROM PRODUTOS;   // VEM TODAS AS TABELAS
+                  ===============================================
+
+
+      COM INNER JOIN
+
+                                                                       //AQUI QUERO QUE VENHA NAO SO O CODIGO DA CATEGORIA, E SIM O NOME DA CATEGORIA
+SELECT P.ID, P.PREÇO, P.DESRIÇÃO, P.QTDESTOQUE, C. NOME 'CATEGORIA'     // dá um alias RENOMEIA ESSE NOME ENTRE APOSTOFRO, SUBSTITUI NA CONSULTA O VALR NOME POR CATEGORIA  
+FROM PRODUTOS P INNER JOIN CATEGORIAS C                                // AQUI FAZ A JUNÇÃO E JÁ RENOMEIA
+ON C.ID = P.CATEGORIAID                                              //AQUI É ONDE TEM RELAÇÃO UMA TABELA COM A OUTRA, O LINK 
+
+WHERE P.PREÇO < 10  OR P.QTDESTOQUE <10                          // AND (E)     OR  (OU)
+
+
+                ===================================================
+            //o alias '' renomeia a palavara ID para CODIGo
+SELECT P.id 'CODIGO', p.desrição, (p.preço*p.qtdestoque) 'Total', //o valor da multiplicação ficara dentro do alias total'    // multiplicar todo o estoque pela quantidade
+c.nome FROM produtos p inner join categoria c ON p.categoriaID = c. ID
+                                                          
+
+
+
 
