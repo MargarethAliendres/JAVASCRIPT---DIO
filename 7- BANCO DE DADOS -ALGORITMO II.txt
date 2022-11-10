@@ -84,9 +84,7 @@ SQL -  CREATE TABLE ITENS_VENDAS           // A CHAVE PRIMARY KEY É COMPOSTA, V
                                                   
 
 
-
-
-
+    
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                                    POPULAR A TABELA
@@ -139,22 +137,29 @@ SQL-
  ABAIXO EXECUTAR
 
 =====================================================================================
+                    
+                               SQL- CONSULTA
+      
 
-                                      CONSULTA
-      SIMPLES
+
+SIMPLES
 
 SELECT  ID, PREÇO, DESRIÇÃO FROM PRODUTOS;    // VEM SOMENTE A TABELA ESPECIFICADA
 
    OU
 
 SELECT*FROM PRODUTOS;   // VEM TODAS AS TABELAS
+
                   ===============================================
+
+                TRAZER NA TABELA O NOME DA CATEGORIA, NÃO O CODIGO
+
 
 
       COM INNER JOIN
 
                                                                        //AQUI QUERO QUE VENHA NAO SO O CODIGO DA CATEGORIA, E SIM O NOME DA CATEGORIA
-SELECT P.ID, P.PREÇO, P.DESRIÇÃO, P.QTDESTOQUE, C. NOME 'CATEGORIA'     // dá um alias RENOMEIA ESSE NOME ENTRE APOSTOFRO, SUBSTITUI NA CONSULTA O VALR NOME POR CATEGORIA  
+SELECT P.ID, P.PREÇO, P.DESRIÇÃO, P.QTDESTOQUE, C. NOME 'CATEGORIA'     // dá um alias'' RENOMEIA ESSE NOME ENTRE APOSTOFRO, SUBSTITUI NA CONSULTA O VALR NOME POR CATEGORIA  
 FROM PRODUTOS P INNER JOIN CATEGORIAS C                                // AQUI FAZ A JUNÇÃO E JÁ RENOMEIA
 ON C.ID = P.CATEGORIAID                                              //AQUI É ONDE TEM RELAÇÃO UMA TABELA COM A OUTRA, O LINK 
 
@@ -162,11 +167,33 @@ WHERE P.PREÇO < 10  OR P.QTDESTOQUE <10                          // AND (E)    
 
 
                 ===================================================
-            //o alias '' renomeia a palavara ID para CODIGo
+           
+                  VER VALOR TOTAL DO ESTOQUE - MULTIPLICAR  
+
+
+//o alias '' renomeia a palavara ID para CODIGo
 SELECT P.id 'CODIGO', p.desrição, (p.preço*p.qtdestoque) 'Total', //o valor da multiplicação ficara dentro do alias total'    // multiplicar todo o estoque pela quantidade
 c.nome FROM produtos p inner join categoria c ON p.categoriaID = c. ID
                                                           
 
+           ======================================================================
+              
+                  VER VALOR FINAL DO PRODUTO VENDIDO COM DESCONTO
+
+SELECT idprodutos, (valorprodutos - (valorprodutos*desconto/100)) 'total final'
+FROM itens_vendas
+
+          ===========================================================================
+
+                    AGRUPAMENTO PELA CATEGORIA  -  COUNT
+
+SELECT count(p.id), c.nome FROM produtos p inner join categoria c on p.categoriaid = c.id
+
+group by p.categoriaid
+
+        ==============================================================================
+     
+                                ORDENAÇÃO
 
 
 
