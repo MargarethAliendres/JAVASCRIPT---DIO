@@ -195,5 +195,7 @@ group by p.categoriaid
      
                                 ORDENAÇÃO
 
+    select* from produtos order by preço
+
 
 

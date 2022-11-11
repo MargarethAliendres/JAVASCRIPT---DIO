@@ -1,0 +1,7 @@
+-classpath 'C:\\Users\\inspect1\\Desktop\\Lógica de programação III\\Workspace\\Comentarios\\build\\classes\\java\\main;C:\\Users\\inspect1\\Desktop\\Lógica de programação III\\Workspace\\Comentarios\\build\\resources\\main'
+-d 'C:\\Users\\inspect1\\Desktop\\Lógica de programação III\\Workspace\\Comentarios\\build\\docs\\javadoc'
+-doctitle 'Comentarios API'
+-notimestamp 
+-quiet 
+-windowtitle 'Comentarios API'
+'C:\\Users\\inspect1\\Desktop\\Lógica de programação III\\Workspace\\Comentarios\\src\\main\\java\\Comentarios\\Main.java'

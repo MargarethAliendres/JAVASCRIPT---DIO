@@ -1,0 +1,152 @@
+Algoritmo "ORIENTAÇÃO A OBJETOS"         - CADASTRO DE 1 CLIENTE
+                                  
+                      
+tipo
+                   // o registro é uma classe chamada cadastroCliente
+cadastroCliente = registro   // a orientação a objeto, permite que vc cadastre outros tipos alem de caractere, inteiro, real . Nesse caso cadastramos o novo tipo que é CadastroCliente
+nome: caractere               
+rg:  caractere              
+idade: caractere
+fimregistro
+
+Var
+
+cliente1 : cadastroCliente      //variavel cliente1, primeiro objeto cliente//  é uma instacia da classe registro
+
+
+Inicio
+
+escreval("Digite seu nome:")
+leia(cliente1.nome)                           //armazena no cliente1 e na variavel nome
+ limpatela
+ 
+escreval("Digite seu rg:")
+leia(cliente1.rg)
+ limpatela
+ 
+escreval("Digite sua idade:")
+leia(cliente1.idade)
+limpatela
+
+
+escreval("Nome: ", cliente1.nome, " RG:",  cliente1.rg, " idade: ", cliente1.idade)
+
+
+Fimalgoritmo
+
+==========================================================================================================
+
+                        VETOR - CADASTRO DE MUITOS CLIENTES
+
+
+Algoritmo "ORIENTAÇÃO A OBJETOS"         - CADASTRO D CLIENTE
+
+
+tipo
+
+cadastroCliente = registro
+nome: caractere
+rg:  caractere
+idade: caractere
+fimregistro
+
+Var
+
+clientes : vetor[1..3] de cadastroCliente
+opcao: caracter
+i: inteiro
+rgPesquisa: caractere
+
+Inicio
+
+repita
+
+    escreval("1-cadastrar: ")
+    escreval("2- pesquisar: ")
+    escreval("3- sair: ")
+    leia (opcao)
+    
+   se opcao = "1" entao
+      para i de 1 ate 3 faca
+        se clientes[i].nome = "" entao
+           escreval (" Nome: ")
+           leia(clientes[i].nome)
+           escreval (" RG: ")
+           leia(clientes[i].rg)
+           escreval (" Idade: ")
+           leia(clientes[i].idade)
+           limpatela
+           interrompa
+           fimse
+        fimpara
+   senao
+   se opcao = "2" entao
+       escreval("Digite RG")
+       leia( rgPesquisa)
+     para i de 1 ate 3 faca
+        se clientes[i].rg = rgPesquisa entao
+           escreval (clientes[i].nome," ", "Encontrado")
+          interrompa
+        fimse
+     fimpara
+   fimse
+   fimse
+ ate opcao = "3"
+ 
+Fimalgoritmo
+
+
+======================================================================================================
+
+                                              HERANÇA
+
+
+                                         CADASTRO DE PESSOA
+
+Algoritmo "ORIENTAÇÃO A OBJETOS"          
+
+
+tipo
+
+pessoa = registro
+nome: caractere
+dataNascimento: caractere
+
+fimregistro
+
+pessoaFisica = pessoa                   //herda um pouco de pessoa
+inicio
+cpf: caractere
+rg: caractere
+fim
+
+pessoaFisica = juridica                  //herda um pouco de pessoa
+inicio
+CNPJ: caractere
+ie: caractere
+fim
+
+
+
+Var
+
+
+Inicio
+
+
+
+ 
+Fimalgoritmo
+
+============================================================================================================
+
+              
+            POLIMORFISMO É ÚTIL QUANDO ESTÁ TRABALHADO COM HERANCA - CRIA UMA FUNÇÃO QUE ACEITARIA 
+COMO DADO DE ENTRADA(AO INVES DE PESSOA FISICA OU JURIDICA), ACEITARIA UMA VARIAVEL PESSOA, QUE PODERIA SER TANTO FISICA COMO JURIDICA, 
+DEPENDENDO DE QUEM CHAMAR ESSA FUNÇÃO E QUE TIPO DE PARAMENTRO PASSA PARA A VARIAVEL PESSOA.
+
+
+
+
+
+
