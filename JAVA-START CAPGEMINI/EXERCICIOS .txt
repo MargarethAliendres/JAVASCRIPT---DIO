@@ -1,13 +1,14 @@
-package ComandoLeituraGravação;
-
-import java.util.Scanner;
-
 
                                     EXERCICIOS
 
 
 15. Faça um algoritmo que receba um número e diga se este número está no intervalo entre 100 e 200;
 
+                                  leito de dados IF e ELSE
+
+package ComandoLeituraGravação;
+
+import java.util.Scanner;
 
 public class Principal {
 
@@ -30,5 +31,44 @@ public class Principal {
       }
 
 
+=============================================================================================================
+
+                  24. Faça um algoritmo que receba “N” números e mostre positivo, negativo ou zero para cada número;
+                                       WHILE E FOR
+
+package Repetição;
+
+import java.util.Scanner;
+
+public class Principal {
+
+    public static void main(String[] args) {
+
+       Scanner leitor = new Scanner(System.in);
+       
+       char desejaContinuar = 'S';    // condição de parada//
+              
+       while (desejaContinuar == 'S' || desejaContinuar == 's') { 
+           
+           System.out.println("Digite um numero:");
+           int numero = leitor.nextInt();
+           
+           if (numero == 0) {
+               System.out.println("Numero Zero");
+           }else{
+               if(numero >0){
+                   System.out.println("Numero positivo");
+               } else{
+               System.out.println("Numero negativo");
+                }
+            }
+           
+           System.out.println("Deseja continuar: S- sim, N - nao");
+           desejaContinuar = leitor.next().charAt(0);  // vai pegar a primeira letra do que vai ser digitado//
+           
+           
+       }
+    }
+}
 
 
