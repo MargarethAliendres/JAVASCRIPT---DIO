@@ -1,8 +1,0 @@
-
-                JAVA - FERRAMENTA NETBEANS
-
-
-     PARA SAÍDA - 
- 
-    System.out.println("olá Mundo")            //tem que respeitar a letra maiuscula , no inicio do System.
-    System.out.println("meu segundo comando")

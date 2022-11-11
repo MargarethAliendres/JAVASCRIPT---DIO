@@ -1,0 +1,79 @@
+
+                                   IF - ELSE    (SE-SENAO) - TRATA DE CONDIÇÕES LÓGICAS
+
+package EstruturasDeSelecao;
+
+
+
+public class Main {
+    
+    public static void main(String[] args) { 
+
+//Exemplo de estrutura simples
+        int media = 7;
+
+        if (media >= 7) {
+            System.out.println("Aprovado");
+        } else {
+            System.out.println("Aprovado");
+        }
+
+//Exemplo de estrututa aninhada
+        if (media >= 7) {
+            System.out.println("Aprovado");
+        } else {
+            if (media >= 5) {
+                System.out.println("Em recupera��o");
+            } else {
+                System.out.println("Reprovado");
+
+    
+         OU 
+
+       int media = 7;
+       
+       if (media >=7) {
+          if (media==10) {
+            system.out.println("Parabens aprovado nota maxima")
+          } else {
+             system.out.println("Aprovado")
+          }
+       else {
+           system.out.println("Reprovado")
+        }
+     } 
+       
+
+          
+        
+
+===========================================================================================
+
+                             SWITCH -    (ESCOLHA - CASO)   - DÁ CONJUNTO DE ESCOLHA/OPÇÕES - PARA MENU
+
+
+package EstruturasDeSelecao;
+
+
+public class Main {
+    
+    public static void main(String[] args) { 
+
+
+int codigoProduto = 1;
+        switch (codigoProduto) {
+            case 1:
+                System.out.println("Produto 1");
+                break;
+
+            case 2:
+                System.out.println("Produto 2");
+                break;
+
+            case 3:
+                System.out.println("Produto 3");
+                break;
+
+            default:
+
+    

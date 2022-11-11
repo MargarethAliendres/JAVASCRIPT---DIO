@@ -1,0 +1,121 @@
+
+                JAVA - FERRAMENTA NETBEANS
+ 
+  
+    
+    COMENTARIO
+
+    // comentario de linha
+    
+
+      /*  comentario de bloco
+         mmasmmmsmfmafmmsfm 
+      */ 
+    
+
+
+      /**     */   gera documentação do codigo     
+         depois com ferramenta de terceiro, tudo que esta entre esse modelo vai para a documentaçao.
+
+
+        java.doc -  é a documentação   obs: tudo entre  /**     */  vai para o java.doc
+
+
+==========================================================================================================
+                         
+  SAÍDA 
+ 
+    System.out.println("olá Mundo")            //tem que respeitar a letra maiuscula , no inicio do System.
+    System.out.println("meu segundo comando")
+
+
+
+=============================================================================================================
+
+                       COMANDO DE LEITURA E GRAVAÇÃO/ENTRADA E SAÍDA
+
+LEITURA/ENTRADA/GRAVAÇAO
+
+package ComandosEntradaSaida;
+import java.util.Scanner;
+ublic class Main {
+    public static void main(String[] args) {
+Scanner leitor = new Scanner(System.in);     
+        
+        int n = leitor.nextInt();
+        float f = leitor.nextFloat();
+        double d = leitor.nextDouble();
+        String s = leitor.next(); //L� apenas uma palavra, n�o � permitido o uso do caractere espa�o
+        String ss = leitor.nextLine(); //Leitura de texto com mais de uma palavra, até a pessoa apertar o enter.
+        
+        char c = leitor.next().charAt(0);
+
+  SAIDA
+        printf() - Imprime o valor de uma vari�vel conforme uma formata��o especificada
+
+        String texto = "Esse texto ser� impresso no console";
+        String outroTexto = "Esse texto tamb�m ser� impresso no console";
+
+        System.out.println(texto); Imprime o valorm de uma vari�vel e pula uma linha
+        System.out.print(outroTexto); Imprime o valor de uma vari�vel, e nao pula linha
+ 
+==========================================================================================================
+                              
+                                VARIAVEIS/TIPOS E OPERADORES
+
+
+package VariaveisTiposOperadores;
+
+import java.util.Date;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+          //VARIAVEIS PRIMITIVAS  - OBS sao letra minuscula inicial / todas as variaves podem ser inicializadas
+
+        byte idade;                   //NUMERICA INTEIRO
+        short pontosAcumulados;  
+        int quantidadeUsuarios = 0;  // SEM VIRGULA INTEIROS
+        float cotacaoDolar = 5.0f;    // COM VIRGULA OU REAL COM VIRGULA  obs: para o float sempre que iniciar tem que colocar o f na frente
+        double consumoMedio = 6.0d ;  // ARMAZENA COM CASAS DECIMAIS         obs: para o double sempre que iniciar tem que colocar o d na frente
+        boolean estaLogado = false;    // VALORES LOGICO
+        char genero = 'M';             //ARMAZENA APENAS UMA LETRA   obs: aspas simples
+
+          //VARIAVEIS NAO PRIMITIVAS - OBS sao letra maiuscula inicial 
+       
+        String nome = "sou a mlehor programadora do mundo";                    //ARMAZENA TEXTO    obs: aspas duplas.
+        Date dataNascimento;
+
+
+  /*  
+            Tipos, tamanhos e valores default das vari�veis primitivas:
+        
+            Tipo 	Tamanho (bits) 	Faixa                                                           Valor Padr�o
+            byte 	8               -128 a 127                                                      0
+            short 	16              -32.768 a 32.767                                                0
+            int 	32              -231 a 231 � 1                                                  0
+            long 	64              -263 a 263 -1                                                   0L
+            float 	32              IEEE 754 �1,40129846432481707e-45 a 3,40282346638528860e+38 	0.0f
+            double 	64              IEEE 754 �4,94065645841246544e-324 a 1,79769313486231570e+308   0.0d
+        */
+
+       
+      // OPERAÇÃO ARITIMETICA    +-*/%
+
+        int pontosEquipeA = 10;
+        int pontosEquipeB = 20;
+        
+       
+        int totalSoma = pontosEquipeA + pontosEquipeB;
+        
+        int totalSubtracao = pontosEquipeA - pontosEquipeB;
+    
+        int totalMultiplicacao = pontosEquipeA * pontosEquipeB;
+        
+        int totalDivisao = pontosEquipeA / pontosEquipeB;
+      
+        int totalResto = pontosEquipeA % pontosEquipeB;
+
+
+
