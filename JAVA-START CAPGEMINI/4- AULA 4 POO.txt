@@ -9,14 +9,31 @@ public class Pessoa {                        // abstração - coloca somente os 
     
     private float peso;   // ATRIBUTOS      // encapsulamento dos atributos para não serem modificados em outros lugares, coloca private
     private float altura;
-    
+ 
+   // o metodo construtor com paramento abaixo
+                                          
+   public Pessoa(float peso,float altura ){   // desse jeito obriga na criação doobjeto ja passar um valor para Pessoa.
+     this.peso = peso;
+     this.altura = altura;
+
+    } 
+
+      OU
+
+   // o metodo construtor sem paramentro abaixo
+ 
+   public Pessoa(){             //esse metodo construtor noa precisa ser chamado, quando cria o objeto ele já executa
+   System.out.println(" Margareth Clarinda Carvalho Aliendres"); 
+  } 
+
+
     public float calcularIMC(){        // METODO do que a entidade vai fazer, responsabilidade, qual é a ação da entidade pessoa
         
         float imc = peso /(altura*altura);
         return imc;
     }
-                                        //usa abaixo os meotodos acessores - que sao os modificadores de acesso
-                                             para o objetoPessoa modificar os dados da pessoa.
+                                         //usa abaixo os meotodos acessores - que sao os modificadores de acesso
+                        //paramentro//                    para o objetoPessoa modificar os dados da pessoa.
     public void setPeso(float peso){            
         this.peso = peso;
         
@@ -24,6 +41,7 @@ public class Pessoa {                        // abstração - coloca somente os 
     public float getPeso(){
         return peso;
     }
+                          //paramentro//
     public void setAltura(float altura){
         this.altura = altura;
         
@@ -59,7 +77,11 @@ public class Main {
        
         Scanner leitor = new Scanner (System.in);
        
-        Pessoa objetoPessoa = new Pessoa();
+        Pessoa objetoPessoa = new Pessoa();   // construtor na classe sem paramentro deixa aqui vazio
+
+          OU
+     
+        Pessoa objetoPessoa = new Pessoa(70.0f, 1.50f);   // construtor na classe com paramentro passa valor aqui
         
         
         System.out.println("Digite o peso da pessoa");            // é objeto pessoa que modifica as informaçoes da pessoa.
