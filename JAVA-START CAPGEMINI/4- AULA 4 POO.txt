@@ -1,0 +1,78 @@
+                       
+                                CLASSE  - PESSOA
+
+
+package Class;
+
+
+public class Pessoa {                        // abstração - coloca somente os atributos que ira resolver o problema
+    
+    private float peso;   // ATRIBUTOS      // encapsulamento dos atributos para não serem modificados em outros lugares, coloca private
+    private float altura;
+    
+    public float calcularIMC(){        // METODO do que a entidade vai fazer, responsabilidade, qual é a ação da entidade pessoa
+        
+        float imc = peso /(altura*altura);
+        return imc;
+    }
+                                        //usa abaixo os meotodos acessores - que sao os modificadores de acesso
+                                             para o objetoPessoa modificar os dados da pessoa.
+    public void setPeso(float peso){            
+        this.peso = peso;
+        
+    }
+    public float getPeso(){
+        return peso;
+    }
+    public void setAltura(float altura){
+        this.altura = altura;
+        
+    }
+    public float getAltura(){
+        return altura;
+    }
+}
+
+    
+
+    
+
+
+
+}
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++
+          
+                       CLASSE PRINCIPAL/MAIN  -  CRIA O OBJETO  - na classe main principal
+
+package Classes;
+
+import java.util.Scanner;
+
+public class Main {
+   
+    public static void main(String[] args) {
+       
+        Scanner leitor = new Scanner (System.in);
+       
+        Pessoa objetoPessoa = new Pessoa();
+        
+        
+        System.out.println("Digite o peso da pessoa");            // é objeto pessoa que modifica as informaçoes da pessoa.
+        objetoPessoa.setPeso(leitor.nextFloat());
+        
+        System.out.println("Digite a altura da pessoa");
+        objetoPessoa.setAltura(leitor.nextFloat());
+        
+        System.out.println("IMC - " + objetoPessoa.calcularIMC());
+       
+    }
+    
+}
+
+
+

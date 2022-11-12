@@ -32,9 +32,10 @@ public class Principal {
 
 
 =============================================================================================================
+                                         EXERCICIO
 
-                  24. Faça um algoritmo que receba “N” números e mostre positivo, negativo ou zero para cada número;
-                                       WHILE E FOR
+           24. Faça um algoritmo que receba “N” números e mostre positivo, negativo ou zero para cada número;
+                                          WHILE 
 
 package Repetição;
 
@@ -63,8 +64,8 @@ public class Principal {
                 }
             }
            
-           System.out.println("Deseja continuar: S- sim, N - nao");
-           desejaContinuar = leitor.next().charAt(0);  // vai pegar a primeira letra do que vai ser digitado//
+        System.out.println("Deseja continuar: S- sim, N - nao");
+        desejaContinuar = leitor.next().charAt(0);  // vai pegar a primeira letra do que vai ser digitado//
            
            
        }
@@ -72,3 +73,73 @@ public class Principal {
 }
 
 
+ ===========================================================================================================
+ 
+                                  EXERCICIO
+
+  2. Faça um algoritmo que receba o preço de custo e o preço de venda de 40 produtos. Mostre como resultado
+   se houve lucro, prejuízo ou empate para cada produto. Informe o valor de custo de cada produto, o valor
+   de venda de cada produto, média de preço de custo e do preço de venda;
+                                     
+                                  FOR
+
+package Repetição;
+
+import java.util.Scanner;
+
+public class Principal {
+
+    public static void main(String[] args) {
+
+       Scanner leitor = new Scanner (System.in);
+        
+       String nomeProduto;           //essas variaveis fora do for é para a cada repetição nao criar novas variaveis e economizar memoria 
+       float preçoCusto;
+       float preçoVenda;
+       
+       float totalCusto = 0.0f;           //sempre valor incial antes de iniciar calculo
+       float totalVenda = 0.0f;
+       
+        int i = 0;      // colocou essa variavel fora, para ser nao so do FOR, mas para ela ser de todo o metodo main.
+                
+        for (; i < 3; i++) {     // aqui inicia com ; pois o i ja foi iniciado acima
+            
+            System.out.println("Digite o nome do produto: ");
+            nomeProduto = leitor.next();        // O PROF. COLOCA nextLine, mas no meu  nao da certo. coloco só next
+            
+            System.out.println("Digite o preço de custo: ");  // letra maiuscula aqui no Float
+            preçoCusto = leitor.nextFloat();
+            
+            System.out.println("Digite o preço de venda: "); //letra maiuscula aqui no Float
+            preçoVenda = leitor.nextFloat();
+            
+            
+            
+            totalCusto = totalCusto + preçoCusto;         // sempre tem que ter um valor inicial antes de calcular
+            totalVenda = totalVenda + preçoVenda;
+
+                
+            
+            if(preçoCusto == preçoVenda){
+                 System.out.println ("Empate");
+                }else{  
+                if(preçoCusto <preçoVenda){
+                 System.out.println ("Lucro");
+                }else{
+                   System.out.println ("prejuizo");
+               }   
+            }
+            
+         System.out.println(nomeProduto + ", Preço de custo: " + preçoCusto + ", Valor de venda: " + preçoVenda );
+            
+        }
+            
+         System.out.println ("A média do preço de custo é de: " + (totalCusto / i ));                 //   fora do FOR
+         System.out.println ("A média do preço de venda é de: " + (totalVenda / i ));                               
+                  
+        }
+    }
+
+
+
+      

@@ -48,14 +48,17 @@ public class Principal {
         int totalAlunos = 10;    // varivel de controle fora do while, incicia com 10 , valor da parada
 
         Scanner leitor = new Scanner(System.in);
+       
+         String nomeAluno;
+         int    idadeAluno;  
 
         while (totalAlunos > 0) {    // condição logica que uma hora fica falsa e para. lá embaixo no decremento  //se deixar while(true) fica rodando infinitamente
 
             System.out.println("digite seu nome: ");
-            String nomeAluno = leitor.next();        // obs: nextline pula uma linha 
+            nomeAluno = leitor.next();        // obs: nextline pula uma linha 
 
             System.out.println("digite seu nome: ");
-            int idadeAluno = leitor.nextInt();
+            idadeAluno = leitor.nextInt();
 
             // obs: concatenação para variaveis primitivas é desse jeito abaixo
             System.out.println("Nome do aluno é:" + nomeAluno + " Sua "
