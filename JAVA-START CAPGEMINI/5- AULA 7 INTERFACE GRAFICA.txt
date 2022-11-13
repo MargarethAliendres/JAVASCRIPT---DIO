@@ -1,0 +1,63 @@
+
+                           INTERFACE     
+
+
+    NO NOTBEANS - NO PROJETO - ENCIMA DO PACOTE- CLICAR MOUSE LADO DIREITO - JFRAME OU OUTROS E ESCOLHA GUIFORMS - JFRAME FORM
+   
+    COLOQUE O NOME DA INTERFACE (MINHA TELA).
+
+
+
+     
+    O CONTEUDO DA AULA E A TELA ESTA NO EMAIL - MARGARETH-PROFISSIONAL
+
+        NOME(AULA7 START CAPGEMINI)
+
+
+
+
+
+=============================================================================================================
+                         EVENTOS - DOS COMPONENTES                // CODIGO  API (JOptionPane)-cuida de caixas, janelas, botoes, etc.
+
+    SELECIONE O COMPONENTE - A DIREITO DO LADO DE PROPRIEDADES - CLIQUE EM EVENTOS.
+
+HABILITE O EVENTO ESCOLHIDO - LOGO ABRIRÁ O CÓDIGO - 
+
+private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        JOptionPane.showConfirmDialog(rootPane, "Seja bem vindo");   // digite esse modelo de código
+    }       
+
+
+ O CONTEUDO DA AULA E A TELA ESTA NO EMAIL AULA START CAPEGMINI INTERFACE GRAFICA - MARGARETH-PROFISSIONAL
+
+        NOME(AULA7 START CAPGEMINI) 
+
+
+===========================================================================================================
+
+                           ARVORE - ONDE VEMOS E SELECIONAMOS PARA FAZER AS CONF. OS COMPONENTES COLOCADOS UM DENTRO DO OUTRO - LADO ESQUERDO DA TELA 
+
+EX:  PANEL
+       LABEL  -  TEXT FIELD
+       LABEL    -  TEXT FIELD
+    
+    PANEL
+        TEXT AREA
+         BOTTON   
+
+  EX- ESTÁ NO EMAIL MARGARETN PROFISSIONAL START CAPGEMINI INTERFFACE GRAFICA
+
+
+=============================================================================================================
+                     
+                         RESPONSAVIDADE DA TELA
+
+CLICAR LADO DIREITO NO COMPONENTE - 
+      
+      ARCHOR   -  PARA QUE LADO QUE FIXAR O CONTEUDO FIXO, O OUTRO LADO QUE EXPANDE
+
+      AUTO RESING - O JEITO QUE VAI EXPANDIR
+
+      EDIT LAYOUT SPACE - CLICAR NO ESPAÇO DO LAYOUT
+

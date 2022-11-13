@@ -1,0 +1,124 @@
+  ctrl+a alt+shift+f   endenta o codigo
+
+
+12/11/2022
+                                                 EXERCICIOS
+
+
+6. Crie uma classe chamada Invoice que possa ser utilizado por uma loja de suprimentos de informática para 
+representar uma fatura de um item vendido na loja. Uma fatura deve incluir as seguintes informações 
+como atributos:
+a. o número do item faturado,
+b. a descrição do item,
+c. a quantidade comprada do item e
+d. o preço unitário do item.
+Curso de Lógica para Programação III
+Instrutor: Marcio Michelluzzi
+Sua classe deve ter um construtor que inicialize os quatro atributos. Se a quantidade não for positiva, ela 
+deve ser configurada como 0. Se o preço por item não for positivo ele deve ser configurado como 0.0. 
+Forneça os métodos getters e setters para cada variável de instância. Além disso, forneça um método 
+chamado getInvoiceAmount que calcula o valor da fatura (isso é, multiplica a quantidade pelo preço por 
+item) e depois retorna o valor como um double. Escreva um aplicativo de teste que demonstra as 
+capacidades da classe Invoice.
+
+
+
+                                         CLASSE
+package exercicio4POO;
+
+public final class Invoice {
+
+    private int codigoItem;
+    private String descricão;
+    private int quantidade;
+    private float preçoUnitario;
+    // metodo construtor
+
+    public Invoice(int codigoItem, String descricão, int quantidade, float preçoUnitario) {
+
+        this.setCodigoItem(codigoItem);
+
+        this.setDescricão(descricão);
+        
+        this.setQuantidade(quantidade);
+        
+        this.setPreçoUnitario(preçoUnitario);
+
+        // obs; foi colocado a restrição do quantidade e preço uinitario no set abaixo.
+    }
+
+    //metodo ação//
+    public double getInvoiceAmount() {
+
+        return (quantidade * preçoUnitario);
+
+    }
+
+    //metodo modificadores de acesso/acessores
+    public int getCodigoItem() {
+        return codigoItem;
+    }
+
+    public void setCodigoItem(int codigoItem) {
+        this.codigoItem = codigoItem;
+    }
+
+    public String getDescricão() {
+        return descricão;
+    }
+
+    public void setDescricão(String descricão) {
+        this.descricão = descricão;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        if (quantidade < 0) {
+            this.quantidade = 0;
+        } else {
+            this.quantidade = quantidade;
+        }
+    }
+
+    public float getPreçoUnitario() {
+        return preçoUnitario;
+    }
+
+    public void setPreçoUnitario(float preçoUnitario) {
+        if (preçoUnitario < 0) {
+            this.preçoUnitario = 0;
+        } else {
+            this.preçoUnitario = preçoUnitario;
+        }
+
+    }
+}
+
+==========================================================================================================
+
+                              OBJETO
+
+package exercicio4POO;
+
+public class Main {
+    
+          
+    public static void main(String[] args) {
+        
+       Invoice objetoInvoice = new Invoice(1, "mousepad", 10, 50.00f);  // depois que escrevo o segundo invoice segura o ctrl+espaco para vir o campo para colocar os valores nos caompos definico pelo construtor
+       
+        System.out.println("Valor total = " + objetoInvoice.getInvoiceAmount()); // depois que escrevo objetoInvoice. segura o ctrl+espaco e escolha o metodo acçao onde tem os calculos
+        
+       
+        
+    }
+    
+}
+
+
+
+
+
