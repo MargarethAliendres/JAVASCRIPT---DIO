@@ -16,7 +16,7 @@ import util.ConnectionFactory;
 public class ProjectDAO {
 
     public void save(Project project) {
-        String sql = "INSERT INTO projects(name, description, createdAt, updatedAt) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO projects(name, description, createdAt, updatedAt) VALUES (?, ?, ?, ?,)";
 
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -46,7 +46,7 @@ public class ProjectDAO {
                     conn.close();
                 }
             } catch (SQLException ex) {
-                throw new RuntimeException("Erro ao fechar a conexão", ex);
+                throw new RuntimeException("Erro ao fechar a conexao", ex);
             }
         }
 
