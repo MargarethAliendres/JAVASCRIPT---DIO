@@ -3,11 +3,14 @@ package Controller;
 
 import Model.Project;             // aqui tem que mudar de acordo com a entidade 
 import java.sql.Connection;
+
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 import util.ConnectionFactory;
 
 
@@ -41,7 +44,7 @@ public class ProjectController {
             statement.execute();
         } catch (Exception ex) {
             throw new RuntimeException("Erro ao salvar o projeto " + ex.getMessage(), ex);
-        } finally { ConnectionFactory.closeConnection((com.mysql.jdbc.Connection) connection, statement);   // fecha a conexao e o statement
+        } finally { ConnectionFactory.closeConnection(connection, statement);   // fecha a conexao e o statement
             
             
             } 
@@ -69,12 +72,13 @@ public class ProjectController {
             statement.execute();
         } catch (Exception ex) {
             throw new RuntimeException("Erro ao atualizar o projeto" + ex.getMessage(), ex);
-        } finally { ConnectionFactory.closeConnection((com.mysql.jdbc.Connection) connection, statement);
-            
+        } finally { ConnectionFactory.closeConnection(connection, statement);
         
-        }
+                }
         
     }
+        
+   
     
     @SuppressWarnings("empty-statement")
     public void removeById(int id ) throws SQLException {
@@ -91,7 +95,7 @@ public class ProjectController {
         } catch (Exception ex) {
            throw new RuntimeException("Erro ao deletar o projeto" + ex.getMessage(),  ex); 
         }finally {                                        //sempte é executado 
-            ConnectionFactory.closeConnection((com.mysql.jdbc.Connection) connection, statement);
+            ConnectionFactory.closeConnection(connection, statement);
             
         }
         
@@ -110,7 +114,7 @@ public class ProjectController {
         
         //representa um ventor, mas é bom quando trabalho com coleções/conjunto de valores 
         //lista de tarefas devolvida quando a chamado do metoto acontecer
-        List<Project> project = new ArrayList<>();
+        List<Project> project = new ArrayList<Project>();
             try {
             
        
@@ -139,7 +143,7 @@ public class ProjectController {
                      
             } finally {                                        //sempte é executado 
             
-            ConnectionFactory.closeConnection((com.mysql.jdbc.Connection) connection, statement, resultSet);   // aqui tambem precisa fechao o resultset
+            ConnectionFactory.closeConnection(connection, statement, resultSet);   // aqui tambem precisa fechao o resultset
             
         }
           return project;                   // retorna a lista de tarefas que foi criada e carregada do banco de dados  

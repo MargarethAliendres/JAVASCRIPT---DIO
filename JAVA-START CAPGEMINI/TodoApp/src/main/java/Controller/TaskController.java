@@ -3,11 +3,14 @@ package Controller;
 
 import Model.Task;       // aqui tem que mudar de acordo com a entidade
 import java.sql.Connection;
+
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 import util.ConnectionFactory;
 
 
@@ -123,7 +126,7 @@ public class TaskController {
         
         //representa um ventor, mas é bom quando trabalho com coleções/conjunto de valores 
         //lista de tarefas devolvida quando a chamado do metoto acontecer
-        List<Task> task = new ArrayList<>();
+        List<Task> task = new ArrayList<Task>();
         
         
         try {
