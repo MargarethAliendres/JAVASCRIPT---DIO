@@ -14,6 +14,7 @@ import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.List;
+
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import model.Project;
@@ -61,8 +62,6 @@ public class MainScreen extends javax.swing.JFrame {
         jLabelToolBarSubTitle = new javax.swing.JLabel();
         jLabelInfos = new javax.swing.JLabel();
         jPanelProjects = new javax.swing.JPanel();
-        jScrollPaneProjects = new javax.swing.JScrollPane();
-        jListProjects = new javax.swing.JList<>();
         jPanelTasksTollBar = new javax.swing.JPanel();
         jLabelTasksToolBarTitle = new javax.swing.JLabel();
         jLabelTasksToolBarAdd = new javax.swing.JLabel();
@@ -111,7 +110,7 @@ public class MainScreen extends javax.swing.JFrame {
 
         jLabelToolBarSubTitle.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelToolBarSubTitle.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelToolBarSubTitle.setText("Anote tudo, n√£o esque√ßa nada");
+        jLabelToolBarSubTitle.setText("Anote tudo, n„o esqueÁa nada");
 
         jLabelInfos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -148,33 +147,15 @@ public class MainScreen extends javax.swing.JFrame {
         jPanelProjects.setBackground(new java.awt.Color(255, 255, 255));
         jPanelProjects.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jListProjects.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jListProjects.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jListProjects.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jListProjects.setFixedCellHeight(50);
-        jListProjects.setSelectionBackground(new java.awt.Color(0, 153, 102));
-        jListProjects.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jListProjectsMouseClicked(evt);
-            }
-        });
-        jScrollPaneProjects.setViewportView(jListProjects);
-
         javax.swing.GroupLayout jPanelProjectsLayout = new javax.swing.GroupLayout(jPanelProjects);
         jPanelProjects.setLayout(jPanelProjectsLayout);
         jPanelProjectsLayout.setHorizontalGroup(
             jPanelProjectsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelProjectsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPaneProjects, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 214, Short.MAX_VALUE)
         );
         jPanelProjectsLayout.setVerticalGroup(
             jPanelProjectsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelProjectsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPaneProjects)
-                .addContainerGap())
+            .addGap(0, 684, Short.MAX_VALUE)
         );
 
         jPanelTasksTollBar.setBackground(new java.awt.Color(255, 255, 255));
@@ -253,7 +234,7 @@ public class MainScreen extends javax.swing.JFrame {
         jLabelEmptyTasksSubTitle.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelEmptyTasksSubTitle.setForeground(new java.awt.Color(153, 153, 153));
         jLabelEmptyTasksSubTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelEmptyTasksSubTitle.setText("Clique no bot√£o \"+\" para adicionar uma nova tarefa");
+        jLabelEmptyTasksSubTitle.setText("Clique no bot„o \"+\" para adicionar uma nova tarefa");
 
         jLabelEmptyTasksImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelEmptyTasksImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lists.png"))); // NOI18N
@@ -350,13 +331,6 @@ public class MainScreen extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jLabelProjectsToolBarAddMouseClicked
 
-    private void jListProjectsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListProjectsMouseClicked
-        // TODO add your handling code here:
-        int projectIndex = jListProjects.getSelectedIndex();
-        Project project = (Project) projectsModel.get(projectIndex);
-        loadTasks(project.getId());
-    }//GEN-LAST:event_jListProjectsMouseClicked
-
     private void jLabelInfosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelInfosMouseClicked
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(rootPane, "Develop by Marcio Michelluzzi");
@@ -435,14 +409,12 @@ public class MainScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTasksToolBarTitle;
     private javax.swing.JLabel jLabelToolBarSubTitle;
     private javax.swing.JLabel jLabelToolBarTitle;
-    private javax.swing.JList<String> jListProjects;
     private javax.swing.JPanel jPanelEmptyTasks;
     private javax.swing.JPanel jPanelEmptyTasksLayout;
     private javax.swing.JPanel jPanelProjects;
     private javax.swing.JPanel jPanelProjectsToolBar;
     private javax.swing.JPanel jPanelTasksTollBar;
     private javax.swing.JPanel jPanelToolBar;
-    private javax.swing.JScrollPane jScrollPaneProjects;
     private javax.swing.JScrollPane jScrollPaneTasks;
     private javax.swing.JTable jTableTasks;
     // End of variables declaration//GEN-END:variables

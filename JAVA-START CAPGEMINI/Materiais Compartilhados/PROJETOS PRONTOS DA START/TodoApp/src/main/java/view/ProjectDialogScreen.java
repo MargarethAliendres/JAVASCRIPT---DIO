@@ -54,7 +54,7 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
         jTextFieldName.setToolTipText("");
 
         jLabelDescription.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabelDescription.setText("DescriÃ§Ã£o");
+        jLabelDescription.setText("Descrição");
 
         jTextAreaDescription.setColumns(20);
         jTextAreaDescription.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
