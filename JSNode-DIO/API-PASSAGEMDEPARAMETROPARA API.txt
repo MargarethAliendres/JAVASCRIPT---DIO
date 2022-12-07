@@ -1,0 +1,59 @@
+
+******URL - https://pokeapi.co/api/v2/pokemon
+é composta por Ip e o path que é caminho do arquivo
+
+ ip- é o DNS- endereço de dominio convertido em ip
+
+pode passar parametro para uma api - direto no path ou pelo query string
+
+ex:  passar parametro para uma api - direto no path {"count":1154,"next":"https://pokeapi.co/api/v2/pokemon/1                // passagem de parametro para uma api - pela path //
+requisição ao servidor
+
+ex: passar parametro para uma api pela query string: {"count":1154,"next":"https://pokeapi.co/api/v2/pokemon?offset=20&limit=20","previous":null,"results":      // passagem de parametro para uma api - pela query string//
+requisição ao servidor
+
+      Ip = pokeapi.co
+     path = /api/v2/pokemon
+    query String= ?offset=20&limit=20"   // após a interrogação é o filtro da busca o & concatena mais com mais algum filtro
+
+
+ SOLICITAÇÃO
+
+
+*****REQUEST METODO:   GET|  buscar o recurso
+                                               POST| inserir um novo pokemon
+                                               DELETE| deletar o pokemon
+                                               PUT|  atualizar o pokemon
+
+
+esses dois abaixo são configurações
+*****REQUEST HEADERS:                                                                         //como quero receber a resposta
+          configuração da api
+             Accept-Language: 
+             pt-BR;
+             pt;q=0.9
+             en-US;q=0.8
+             en;q=0.7
+
+           autorization:  // é aqui que coloca as autenticações
+
+
+  
+   dependendo do tipo de requisição tem o body                      
+           Request Headers:                                                
+              content-type: aplplication/jason
+
+******  REQUEST  body{                                                                //dado que irá trafegar
+                                                                                         //o GET nao tem body na solicitação
+                                                                                        // tem body POST/PUT/PATH     
+                 }
+
+
+
+RESPOSTA DO SERVIDOR DA REQUISIÇÃO
+
+***** STATUS CODE     200 A 299 SUCESSO 300 A 399 REDIRECT  400 A 499 ERRO LADO DO CLIENTE   500 A 599 ERRO INTERNO DO SERVIDOR
+
+*****RESPONSE HEADERS:                                                                      //como o servidor me respondeu
+                                                                                                  
+*****RESPONSE BODY:                                                                          / /o GET  tem body na resposta

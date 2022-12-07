@@ -1,0 +1,38 @@
+
+let variavel = 10 + 10;      //+-*/   // let a variavel pode ser reatribuida
+console.log(variavel)
+
+variavel = 30;              // muda o valor da variavel abaixo        
+console.log(variavel)
+
+const pi = 10;             // constante não pode ser reatribuida
+console.log(pi);
+
+pi = 20;           //constante nao muda valor dá erro
+console.log(pi);
+
+
+
+
+/*faça um programa para calcular o valor uma viagem
+
+voce terá 3 variaveis. Sendo elas:
+
+1-preço combustivel;
+2- valor medio de gasto do carro por km;
+3- distancia em km da viagem;
+
+
+imprima no console o valor que será gasto de combustivel para realizar esta viagem */
+
+
+const combustivel = 5.79;     
+
+const kmPorlitrocarro = 12;
+
+const viagemKm = 1580;
+
+
+const LitrosConsumidos = viagemKm / kmPorlitrocarro;
+const TotalGasto = LitrosConsumidos * combustivel;
+console.log('Total de gasto é =' + TotalGasto.toFixed(2));  //para arrendodar valores

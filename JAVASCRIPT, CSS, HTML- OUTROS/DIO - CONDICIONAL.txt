@@ -1,0 +1,215 @@
+/*faça um programa para calcular o valor uma viagem
+
+voce terá 3 variaveis. Sendo elas:
+
+1-preço  etanol;
+2-preço  gasolina;
+3- tipo de combustivel que esta no carro
+2- gasto medio de km por litro ;
+3- distancia em km da viagem;
+
+
+imprima no console o valor que será gasto de combustivel para realizar esta viagem */
+
+
+const precoEtanol = 5.79;
+const precoGasolina = 6.66;
+const kmLitro = 11;
+const kmViagem = 1580;
+const tipoCombustivel = 'Etanol';
+let valorGasto;                              //colocando a variavel de fora
+
+const kmPorlitroFinal = kmViagem / kmLitro;
+
+if (tipoCombustivel === 'Etanol') {
+    valorGasto = kmPorlitroFinal * precoEtanol;
+   
+} else if (tipoCombustivel === 'Gasolina') {
+    valorGasto = kmPorlitroFinal * precoGasolina;
+  
+}
+console.log(valorGasto.toFixed(2));          // retorno de fora
+
+  
+            // outro jeito
+
+const precoEtanol2= 5.79;
+const precoGasolina2 = 6.66;
+const kmLitro2 = 11;
+const kmViagem2 = 1580;
+const tipoCombustivel2 = 'Gasolina';                         
+
+const kmPorlitroFinal2 = kmViagem2 / kmLitro2;
+
+if (tipoCombustivel2 === 'Etanol') {
+    const valorGasto2 = kmPorlitroFinal2 * precoEtanol2;
+    console.log(valorGasto2.toFixed(2)); 
+} else if (tipoCombustivel2 === 'Gasolina') {
+    const valorGasto2 = kmPorlitroFinal2 * precoGasolina2;
+    console.log(valorGasto2.toFixed(2)); 
+}
+
+
+===============================================================================================
+
+const nota1 = 3;
+const nota2 = 2;
+const nota3 = 1;
+
+
+const media = (nota1 + nota2 + nota3) / 3;
+console.log(media);
+
+if(media < 5){
+    console.log('reprovado');
+}else if(media >= 5 && media <=7 ){
+    console.log('recuperação');
+}else{
+    console.log('voce passou');
+}
+
+
+===================================================================================================
+
+
+
+function calcularPeso(peso, altura){          //potencia
+    return peso /Math.pow(altura, 2);        //esse meth.pow é o mesmo que altura*altura  muda a quantidade nesse numero 2// 
+
+}
+
+function classificarImc(imc){
+    
+    
+    if(imc < 18.5){ 
+        return('Abaixo do peso');
+    }else if(imc >= 18.5 && imc < 25){
+        return('peso normal');
+    }else if (imc >= 25 && imc < 30){
+        return('acima do peso');
+    }else if (imc >= 30 && imc < 40){
+        return('obeso');
+    }else{
+        return('obesidade grave');
+    }
+
+}
+ function main(){
+
+        const altura = 1.60;
+        const peso = 80;
+
+        const imc = calcularPeso(peso, altura);
+        console.log(classificarImc(imc));                         
+}
+
+main();                                      //invocação
+
+
+
+//ou assim entre parenetes - imediatamente incovada
+
+//é o main, codigo principal
+(function(){                            //pode até tirar o nome da funcao
+
+    const altura = 1.60;                  // codigo que executa uma vez só, isola o escopo
+    const peso = 80;
+
+    const imc = calcularPeso(peso, altura);
+    console.log(classificarImc(imc));                         
+})();                                          // invocação
+
+
+
+function EscreverNome(nome){
+    console.log('Meu nome é '  + nome );
+}
+   EscreverNome ('Margareth.');
+
+
+   function ClassificarIdade(idade){
+
+         if(idade < 18){
+            return 'menor de idade';
+         }
+         else {
+            return 'maior de idade';
+         }
+   
+    function main(){
+       const idade = 18;
+      
+      console.log(ClassificarIdade(idade))
+      
+   }         
+         }
+   
+
+
+========================================================================================================
+
+
+
+
+/*
+
+const preco = 10;
+const formaPgt = 'debito';
+
+
+
+
+if(formaPgt === 'debito'){
+    const pgtdebito = (preco * 0.90 );   // aqui traz o valor ja a pagar ja com desconto
+    console.log(pgtdebito);
+}else if(formaPgt === 'dinheiroPix'){
+    const pgtCredPix = (preco * 0.85 );
+    console.log(pgtCredPix);
+}else if(formaPgt === 'parcelado2X'){
+    const pgtParc2x = (preco);
+    console.log(pgtParc2x);
+}else if(formaPgt === 'maisde2x'){
+    const pgtMais2x = (preco * 1.15 );
+    console.log(pgtMais2x );
+}
+*/
+
+            // outro jeito
+
+const preco2 = 100;
+const formaPgt2 = 'dinheiroPix';                                         
+ /*             
+   if(formaPgt === 'debito'){
+    console.log(preco2-(preco2 * 0.1));                 //desconta
+}else if(formaPgt === 'dinheiroPix'){
+    console.log(preco2 - (preco2 * 0.15));
+} else if(formaPgt === 'maisde2x'){
+    console.log(preco2 + (preco2 * 0.15));
+} else{
+    console.log(preco2);
+    
+}
+*/
+
+ 
+   //aqui colocando em função
+
+   function aplicarDesconto(preco2,desconto){
+      return (preco2 - (preco2* (desconto/100)));
+         }
+
+   function aplicarJuros(preco2, juros) {  
+       return (preco2 + (preco2* (juros/100)));
+}
+        if(formaPgt2 === 'debito'){
+            console.log(aplicarDesconto(preco2, 10 ));
+        }else if(formaPgt2 === 'dinheiroPix'){
+            console.log(aplicarDesconto(preco2, 15 ));
+    
+        }   else if(formaPgt2 === 'maisde2x'){
+                console.log(aplicarJuros(preco2, 15));
+        } else{
+            console.log(preco2);
+            
+        }
+   

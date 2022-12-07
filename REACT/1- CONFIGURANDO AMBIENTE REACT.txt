@@ -1,0 +1,21 @@
+
+apos configurado o ambiente  cria o projeto  
+
+no console digitar:
+
+npm ou npx (o npx já tras a bibioteca atualizada)
+                              
+                               (nome do projeto)
+1 npx create-react-app projetoreact
+
+2 cd (nome do projeto)
+
+3 yarn start
+ou
+npm start
+
+4 code .   (para o code ficar na raiz da pasta que foi criado o projeto)
+
+para rodar o projeto:
+
+5 npm ou yarn run start

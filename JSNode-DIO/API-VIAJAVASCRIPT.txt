@@ -1,0 +1,7 @@
+
+             SOLICITAÇÃO HTTP VIA JAVASCRIPT
+          FETCH API ->FAZ O MESMO QUE O JQUERY ,ACELS.    
+
+NO GOOGLE - FETCH API GET JSON > 
+
+está no email a codificação javascript api fetch
