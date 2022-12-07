@@ -1,0 +1,13 @@
+
+    o node é o rumtime do Javascript  
+
+      instalar o node, ver versao node node -v 
+
+     para o resultado da programação aparecer no console
+   
+    digite no terminal:
+
+    node (e o nome da pasta).js
+
+
+  ex: node mar.js

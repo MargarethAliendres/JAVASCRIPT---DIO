@@ -1,0 +1,26 @@
+
+Instalar o Node lts, ir no console ver se está instalado node -v, junto já vem o npm, ver se esta instalado npm -v, instalar o yarn
+em seguida abrir o Vscode, e seguir os passos abaixo:
+
+
+apos configurado o ambiente  cria o projeto  
+
+no console digitar:
+
+npm ou npx (o npx já tras a bibioteca atualizada)
+                              
+                               (nome do projeto)
+1- npx create-react-app projetoreact
+
+2- cd (nome do projeto)
+
+3- code .   (para o code ficar na raiz da pasta que foi criado o projeto abrirá uma nova pagina do code)
+
+4- yarn start    ( inicia a aplicação react que acabamos de criar, abre a pagina com caminho 3000)
+ou
+npm start
+
+
+para rodar o projeto:
+
+5- npm ou yarn run start  (inicia a aplicação react que acabamos de criar, abre a pagina com caminho 3000)  é a mesma coisa de cima

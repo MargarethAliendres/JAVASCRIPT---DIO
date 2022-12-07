@@ -1,0 +1,57 @@
+
+   site: nodejs.org     
+   Instalar o node lts
+node -v  (para ver se esta instalada)
+npm -v   (para ver se esta instalada)
+    no code, abrir o terminal git bash
+  instalar o servidor: npm install -g http-server
+ para startar o servidor digite http-server ./ (clique no ip para abrir o browser  para estopar o servidor ctrl+c   
+
+
+  usamos no pokedex
+
+no terminal criar arquivo:
+touch index.html   (depois de criado o arquivo digite http-server ./  para startar o servidor no arquivo ou pasta)
+
+ir no google buscar cdn NORMALIZE copie o codigo e 
+colocar no head da pagina html - para deixar a mesma configuração para todos os navegadores
+
+<!--Normalize css - pegar o link no site (cdn normalize css)  */-->
+    <!-- esse link do normalize deixa o site com margem igual para qualquer browser-->
+    
+este:
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  ir no googlle ROBOTO, e escolher as fontes copie o codigo e coloque no head da pagina html
+ 
+este:
+<!--Font Roboto - servidor global de fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+pesquisar no google o media query css example - copiar o codigo e colocar no css para ficar o layout do tamanho das telas que forem usadas . Ex comp, cel, tablet
+   
+.pokemons{
+    display: grid;                  /* coloca a lista em tabela */
+    grid-template-columns: 1fr 1fr; /* dividida com mesmo numetro de itens*/
+
+    list-style: none;                 /* tira o numero da lista de pokemons*/
+    padding: 0;
+    margin: 0;
+                                   // são essses codigos da media screen 
+ }
+     @media screen and (max-width: 576px) {   /* tornar o layout copiei esse codigo no site digite no google  media query css example*/ 
+     .pokemons {
+      grid-template-columns: 1fr 1fr 1fr ;     /*coloca tres imagens nesse 576*/
+     
+     }
+  }
+     @media screen and (max-width: 992px) {   /* tornar o layout copiei esse codigo no site digite no google  media query css example*/ 
+     .pokemons {
+      grid-template-columns: 1fr 1fr 1fr 1fr;   /* coloca 4 imagens nesse 992*/
+      
+    }
+}

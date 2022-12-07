@@ -1,0 +1,4 @@
+  
+componentes de classes   - faz um certo escopo - para reaproveitar codigo -  a ideia do react é aproveitar codigo
+
+e funcionais
