@@ -1,0 +1,40 @@
+  
+******* react cli - ambiente confortavel para aprender react.
+
+   site do cli :  create-react-app.dev
+
+    dentro da pagina - acima lado direito - docs
+
+     1- npx create-react-app my-app
+     2- cd my-app
+     3- npx create-react-app projetoreactcli       obs; para cada projeto um nome diferrente projetoreactcli  
+     4- cd projetoreactcli
+     5 - code .
+   
+
+
+ ***** navegacao na aplicacao (react router ou router dom é um pacote)    
+                                     site react route  https://v5.reactrouter.com/web/guides/quick-start   (pacote que faz toda a navegacao do projeto)
+     6-  yarn add react-router-dom                       //codigo copiado da pagina instalar esse codigo //
+                                                                                                        // cada tela vai ser um componente em modo geral   e o  reactrouter tira 
+                                                                                                        uma tela poe a outra e se precisar fazer algum tipo de animacao é por aqui
+
+                                      //usa o jsx    dai dentro do projeto - src - cria as pastas - pages - home -index.jsx - login - index.jsx
+                                              
+                                                        o passo a passo está no projeto detro do meu-app  - projetoreactcli
+
+          
+******estilizaçao com (styled-components) - biblioteca css que possibilita escrever codigo css dentro do javascript.
+    
+      instalar e configurar o styled-components   
+      site: styled-components.com   - documentacao - instalacao - copia o dodigo:  
+
+    7- yarn add styled-components
+                              //criar componentes
+      dai cria a pasta componentes - Button -index.jsf - styles.js- Header-index.jsf-styles.js
+
+      depois importa o Button dentro do index da Home. etc....
+
+        o passo a passo está no projeto projectreact1 - que é o clone da DIO
+
+

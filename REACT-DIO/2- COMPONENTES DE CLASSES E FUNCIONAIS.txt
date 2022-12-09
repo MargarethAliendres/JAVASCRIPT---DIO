@@ -1,4 +1,23 @@
-  
-componentes de classes   - faz um certo escopo - para reaproveitar codigo -  a ideia do react é aproveitar codigo
+            
+            Quase tudo no react é componente, a pagina é componente, os elementos dentro dela é componente tambem
+          faz um certo escopo - tudo isso no react para reutilizar o codigo 
 
-e funcionais
+
+**componentes de classes   - ate a versao 15 do react tinha que criar classe para criar componente, quase não utiliza mais os componentes de classe só se for projeto antigo.
+
+** componentes funcionais - hoje componentes dentro de funcoes
+
+ex          // digita ( rfc ) o code traz a funcao         //componente funcional retornando um jsx (ou seja a estrutura do html)
+function App() {
+  return (
+    <div className="App">
+      Aleluia Te amooooooooooo Deus, cuida da minha familia. Coloco todos na palma de suas maos.
+    </div>
+  );
+}
+
+export default App;
+
+
+
+                   

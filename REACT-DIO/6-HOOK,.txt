@@ -1,0 +1,63 @@
+
+ate a versao 16.7 do react - algumas funcionalidades só eram possiveis de ser acessadas atraves de classes(ex lifecycle).
+podia criar componentes a partir de funcao mas ate essa versao so recebiam propriedades, nao podendo acessar todas as 
+funcionalidades do react, como as classes.
+
+           varios tipos de HOOK, os basicos:
+
+************************************************useState******************************
+
+ - lida com estado dentro do componente, estado de algum comportamento,  a cada alteração do componente ele é 
+renderizado, daí é o useState que lida com o estado das alteracoes.
+
+
+********************************************************useEffect*******************
+
+- controla o cicli de vida do componente, desde sua criacao até exclusao renderização do componente 
+
+
+********************************************************useMemo***********************
+
+-armazena variaveis, calculos, evita que sejam redenrizadas sem necessidade
+
+********************************************************useCAllback***********************
+
+-armazena funçoes, evita que funçoes sejam redenrizadas sem necessidade
+
+      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ex:
+
+
+import { useState, useEffect, useMemo, useCallback  } from 'react';               /*importo esse hook de dentro do react*/
+
+
+const Teste = () => {
+
+const [name, setName] = useState('margareth');
+
+const handleChangeName = () => {
+   setName('margaret')
+}
+
+useEffect(() => {
+  alert('renderizei')
+  return('desmontei')
+}, []);
+
+
+const calculo = useMemo(()=> {   /* ela vai ser renderizada*/
+    console.log('calculou')
+    return 10*26589
+},[] );
+
+
+  return (
+    <div>
+        <p> {name}</p>
+        <button onClick={handleChangeName}> Alterar </button>
+    </div>
+  )
+}
+export{ Teste};

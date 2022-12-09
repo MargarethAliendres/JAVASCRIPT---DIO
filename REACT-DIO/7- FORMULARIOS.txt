@@ -1,0 +1,34 @@
+  
+
+implementar formulario, e depois fazer requisicao ao servidor
+
+
+
+*******react hook forms  pacote que gerencia formularios
+
+site: react-hook-form.com
+   
+     git started  - copie o codigo e instale  
+
+ npm install react-hook-form
+
+     git started - abaixo copie esse codigo 
+
+import { useForm } from "react-hook-form";     // e apos abra o login-index e cole.
+
+git started
+ a esquerda abaixo na pasta , schemaValidation copie e instale:
+ npm install @hookform/resolvers yup
+ainda dentro copie os codigos
+ import { yupResolver } from '@hookform/resolvers/yup';
+ import * as yup from "yup";
+e cole 
+
+
+instalar tambem
+
+yarn add yup
+
+
+
+******requisições com axios - 

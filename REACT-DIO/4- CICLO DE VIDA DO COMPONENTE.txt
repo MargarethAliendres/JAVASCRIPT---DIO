@@ -1,0 +1,5 @@
+         
+
+          toda vez que o estado do componente muda ele é renderizado
+
+       quando um componente pai é redenrizado, por padrao os filhos também são redenrizados
