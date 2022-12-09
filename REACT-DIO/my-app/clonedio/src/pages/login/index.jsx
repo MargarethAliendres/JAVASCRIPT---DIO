@@ -4,6 +4,8 @@ import { Button } from '../../components/Button';
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 import { api } from '../../services/api';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
 
 import { useForm } from "react-hook-form";
 
