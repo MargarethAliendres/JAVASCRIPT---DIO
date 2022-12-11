@@ -1,6 +1,9 @@
 
+o protocolo http é cliente servidor, o cliente pede e o servidor processa e responde.
+
+                           ex:
 ******URL - https://pokeapi.co/api/v2/pokemon
-é composta por Ip e o path que é caminho do arquivo
+é composta por Ip(https://pokeapi.co) e o path que é caminho do arquivo(/api/v2/pokemon)
 
  ip- é o DNS- endereço de dominio convertido em ip
 
@@ -12,13 +15,13 @@ requisição ao servidor
 ex: passar parametro para uma api pela query string: {"count":1154,"next":"https://pokeapi.co/api/v2/pokemon?offset=20&limit=20","previous":null,"results":      // passagem de parametro para uma api - pela query string//
 requisição ao servidor
 
-      Ip = pokeapi.co
-     path = /api/v2/pokemon
-    query String= ?offset=20&limit=20"   // após a interrogação é o filtro da busca o & concatena mais com mais algum filtro
+      Ip: pokeapi.co
+     path :  /api/v2/pokemon
+    query String:  ?offset=20&limit=20"   // após a interrogação é o filtro da busca o & concatena mais com mais algum filtro
+           //query String é sempre chave valor
 
-
- SOLICITAÇÃO
-
+ SOLICITAÇÃO/REQUISIÇAO 
+                                                         //requisição http, faça pela url e pelo metodo o tipo da requisicao GET|,POST etc.
 
 *****REQUEST METODO:   GET|  buscar o recurso
                                                POST| inserir um novo pokemon
@@ -26,6 +29,13 @@ requisição ao servidor
                                                PUT|  atualizar o pokemon
 
 
+
+ENTRA EM UMA PAGINA, DÁ F12 PARA ABRIR AREA DO DESENVOLVEDOR -
+   SELECIONE REDE - ABAIXO CABEÇALHO -  DA UM ENTER NA URL DA PAGINA 
+APARECERA UM ARQUIVO ABAIXO, CLIQUE NELE ESSAS CONFIGURAÇÕES 
+ABAIXO ESTARÁ LÁ:
+
+A configuração da requisiçao é o cliente que faz
 esses dois abaixo são configurações
 *****REQUEST HEADERS:                                                                         //como quero receber a resposta
           configuração da api
@@ -35,21 +45,20 @@ esses dois abaixo são configurações
              en-US;q=0.8
              en;q=0.7
 
-           autorization:  // é aqui que coloca as autenticações
+           autorization:  // é aqui que coloca as autenticações  é passado dentro header
 
 
   
    dependendo do tipo de requisição tem o body                      
            Request Headers:                                                
               content-type: aplplication/jason
-
-******  REQUEST  body{                                                                //dado que irá trafegar
-                                                                                         //o GET nao tem body na solicitação
-                                                                                        // tem body POST/PUT/PATH     
+******  request  body{                                 //dado que irá trafegar
+                                                                                        //o GET nao tem body na solicitação
+                                                                                       // tem body POST/PUT/PATH    
                  }
 
 
-
+A configuração da resposta é o servidor que faz
 RESPOSTA DO SERVIDOR DA REQUISIÇÃO
 
 ***** STATUS CODE     200 A 299 SUCESSO 300 A 399 REDIRECT  400 A 499 ERRO LADO DO CLIENTE   500 A 599 ERRO INTERNO DO SERVIDOR
@@ -57,3 +66,57 @@ RESPOSTA DO SERVIDOR DA REQUISIÇÃO
 *****RESPONSE HEADERS:                                                                      //como o servidor me respondeu
                                                                                                   
 *****RESPONSE BODY:                                                                          / /o GET  tem body na resposta
+
+
+
+
+ex: 
+
+Solicitar URL: https://pokeapi.co/api/v2/pokemon/1
+Método da solicitação: GET
+Código de status: 200 OK
+Endereço remoto: 104.21.74.24:443
+Política do referenciador: strict-origin-when-cross-origin
+access-control-allow-origin: *
+Age: 150
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+Cache-Control: public, max-age=86400, s-maxage=86400
+CF-Cache-Status: HIT
+CF-RAY: 7771bcfe39ce1b21-GRU
+Connection: keep-alive
+Content-Encoding: br
+Content-Type: application/json; charset=utf-8
+Date: Sat, 10 Dec 2022 00:07:04 GMT
+etag: W/"359f3-JlmmuiyGZkKyOFlSvLzln1IpB6Q"
+function-execution-id: x49tlum4aoqt
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Zrvfv00wX5tfYW4ZjxIGKESIR%2F%2FDEWWqXQepKB%2FrV0HmBE%2Fq80ZVJFlMccT42hlbmcBnZMPeUTf89jTBxqVJyrGqG7jQsO4rHAtfR615AhZ0BghnHDIIBX1144o%2F"}],"group":"cf-nel","max_age":604800}
+Server: cloudflare
+strict-transport-security: max-age=31556926
+Transfer-Encoding: chunked
+vary: Accept-Encoding,cookie,need-authorization, x-fh-requested-host, accept-encoding
+x-cache: HIT
+x-cache-hits: 1
+x-cloud-trace-context: 8854e8525aa96d8c81cbe720cd5ccba5
+x-country-code: BR
+x-orig-accept-language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+x-powered-by: Express
+x-served-by: cache-cgh11146-CGH
+x-timer: S1670253447.009335,VS0,VE1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: no-cache
+Connection: keep-alive
+Cookie: _ga=GA1.2.1609526322.1670288446; _gid=GA1.2.1953273278.1670620555
+Host: pokeapi.co
+Pragma: no-cache
+sec-ch-ua: "Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"
+sec-ch-ua-mobile: ?1
+sec-ch-ua-platform: "Android"
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36
